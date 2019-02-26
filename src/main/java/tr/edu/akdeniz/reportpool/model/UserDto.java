@@ -1,22 +1,43 @@
 package tr.edu.akdeniz.reportpool.model;
 
-public class UserDto {
+import java.io.Serializable;
 
+public class UserDto {
     private int userId;
     private String username;
     private String email;
-    private int password;
+    private String password;
+    private int isActive;
     private String name;
     private String surname;
 
-
-    public UserDto(String username, String email, int password, String name, String surname) {
+    public UserDto(int userId, String username, String email, String password, String name, String surname) {
+        this.userId = userId;
         this.username = username;
         this.email = email;
         this.password = password;
         this.name = name;
         this.surname = surname;
     }
+
+
+    public Serializable getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(int isActive) {
+        this.isActive = isActive;
+    }
+
+
 
     public int getUserId() {
         return userId;
@@ -42,13 +63,6 @@ public class UserDto {
         this.email = email;
     }
 
-    public int getPassword() {
-        return password;
-    }
-
-    public void setPassword(int password) {
-        this.password = password;
-    }
 
 
     public String getName() {
