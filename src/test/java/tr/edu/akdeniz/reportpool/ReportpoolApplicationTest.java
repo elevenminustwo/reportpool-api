@@ -22,7 +22,6 @@ import com.jayway.restassured.RestAssured;
 public class ReportpoolApplicationTest {
     @Value("${server.port}")
     int port;
-    //asd
 
     @Test
     public void getUsersTest(){
