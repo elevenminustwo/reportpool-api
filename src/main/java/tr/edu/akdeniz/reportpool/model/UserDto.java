@@ -6,12 +6,12 @@ public class UserDto {
     private int userId;
     private String username;
     private String email;
-    private String password;
-    private int isActive;
+    private Serializable password;
+    private Byte isActive;
     private String name;
     private String surname;
 
-    public UserDto(int userId, String username, String email, String password, String name, String surname) {
+    public UserDto(int userId, String username, String email, Serializable password, String name, String surname) {
         this.userId = userId;
         this.username = username;
         this.email = email;
@@ -33,7 +33,7 @@ public class UserDto {
         return isActive;
     }
 
-    public void setIsActive(int isActive) {
+    public void setIsActive(byte isActive) {
         this.isActive = isActive;
     }
 

@@ -8,27 +8,27 @@ import java.util.Objects;
 
 @Entity
 public class Attachmenttype {
-    private int attachmentTypeId;
-    private String filetype;
+    private int attachmenttypeId;
+    private String type;
 
     @Id
-    @Column(name = "AttachmentTypeID", nullable = false)
-    public int getAttachmentTypeId() {
-        return attachmentTypeId;
+    @Column(name = "AttachmenttypeID", nullable = false)
+    public int getAttachmenttypeId() {
+        return attachmenttypeId;
     }
 
-    public void setAttachmentTypeId(int attachmentTypeId) {
-        this.attachmentTypeId = attachmentTypeId;
+    public void setAttachmenttypeId(int attachmenttypeId) {
+        this.attachmenttypeId = attachmenttypeId;
     }
 
     @Basic
-    @Column(name = "Filetype", nullable = true, length = 255)
-    public String getFiletype() {
-        return filetype;
+    @Column(name = "Type", nullable = true, length = 45)
+    public String getType() {
+        return type;
     }
 
-    public void setFiletype(String filetype) {
-        this.filetype = filetype;
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
@@ -36,13 +36,13 @@ public class Attachmenttype {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Attachmenttype that = (Attachmenttype) o;
-        return attachmentTypeId == that.attachmentTypeId &&
-                Objects.equals(filetype, that.filetype);
+        return attachmenttypeId == that.attachmenttypeId &&
+                Objects.equals(type, that.type);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(attachmentTypeId, filetype);
+        return Objects.hash(attachmenttypeId, type);
     }
 }
