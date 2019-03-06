@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java" afterDir="false" />
+    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="database changes added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,6 +17,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/reportpool_api$MainApplicationClass.ic" NAME="MainApplicationClass Coverage Results" MODIFIED="1551206294445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tr.edu.akdeniz.reportpool.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/reportpool_api$ReportpoolApplication.ic" NAME="ReportpoolApplication Coverage Results" MODIFIED="1551896180714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tr.edu.akdeniz.reportpool.*</FILTER>
     </SUITE>
   </component>
@@ -43,20 +48,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+            <state relative-caret-position="187">
+              <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportpoolApplicationTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDto.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportpoolApplicationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="354">
+              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +111,11 @@
         <option value="$PROJECT_DIR$/src/test/resources/applicationtest.properties.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/applicationtest.properties" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/GenericUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java" />
         <option value="$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java" />
       </list>
     </option>
   </component>
@@ -262,7 +276,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReportpoolApplicationTest">
+  <component name="RunManager" selected="Application.ReportpoolApplication">
     <configuration name="ReportpoolApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tr.edu.akdeniz.reportpool.ReportpoolApplication" />
       <module name="reportpool-api" />
@@ -349,8 +363,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReportpoolApplicationTest" />
         <item itemvalue="Application.ReportpoolApplication" />
+        <item itemvalue="JUnit.ReportpoolApplicationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +402,7 @@
       <workItem from="1551728768471" duration="62000" />
       <workItem from="1551728842145" duration="2295000" />
       <workItem from="1551731187544" duration="1643000" />
-      <workItem from="1551890199572" duration="1293000" />
+      <workItem from="1551890199572" duration="2630000" />
     </task>
     <task id="LOCAL-00001" summary="api start up done">
       <created>1551207709789</created>
@@ -488,13 +502,52 @@
       <option name="project" value="LOCAL" />
       <updated>1551891180313</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="database changes added">
+      <created>1551891520722</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891520722</updated>
+    </task>
+    <task id="LOCAL-00016" summary="database changes added">
+      <created>1551891603482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891603482</updated>
+    </task>
+    <task id="LOCAL-00017" summary="database changes added">
+      <created>1551891663059</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891663059</updated>
+    </task>
+    <task id="LOCAL-00018" summary="database changes added">
+      <created>1551891699691</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891699691</updated>
+    </task>
+    <task id="LOCAL-00019" summary="database changes added">
+      <created>1551891739667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891739667</updated>
+    </task>
+    <task id="LOCAL-00020" summary="database changes added">
+      <created>1551891831447</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891831447</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReportpoolApplicationTest - 2019.03.04 at 23h 20m 30s.xml">
-      <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ReportpoolApplicationTest - 2019.03.04 at 23h 20m 42s.xml">
       <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
     </history-entry>
@@ -522,15 +575,19 @@
     <history-entry file="ReportpoolApplicationTest - 2019.03.06 at 19h 44m 05s.xml">
       <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ReportpoolApplicationTest - 2019.03.06 at 21h 12m 53s.xml">
+      <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13093000" />
+    <option name="totallyTimeSpent" value="14430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -547,11 +604,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info id="Persistence" order="3" sideWeight="0.35973597" side_tool="true" weight="0.24304539" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.24304539" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.24304539" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -891,17 +948,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        <state relative-caret-position="354">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -912,13 +965,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
