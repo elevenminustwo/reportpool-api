@@ -12,8 +12,8 @@ public class User {
     private int userId;
     private String username;
     private String email;
-    private String password;
-    private int isActive;
+    private Serializable password;
+    private Byte isActive;
     private String name;
     private String surname;
 
@@ -49,21 +49,21 @@ public class User {
 
     @Basic
     @Column(name = "Password", nullable = true, length = -1)
-    public String getPassword() {
+    public Serializable getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(Serializable password) {
         this.password = password;
     }
 
     @Basic
     @Column(name = "IsActive", nullable = true)
-    public int getIsActive() {
+    public Byte getIsActive() {
         return isActive;
     }
 
-    public void setIsActive(int isActive) {
+    public void setIsActive(Byte isActive) {
         this.isActive = isActive;
     }
 

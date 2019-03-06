@@ -1,16 +1,17 @@
 package tr.edu.akdeniz.reportpool.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-@IdClass(AttachmentPK.class)
 public class Attachment {
     private int attachmentId;
     private String path;
-    private int reportId;
-    private int userId;
     private int attachmenttypeId;
+    private int reportId;
 
     @Id
     @Column(name = "AttachmentID", nullable = false)
@@ -32,27 +33,7 @@ public class Attachment {
         this.path = path;
     }
 
-    @Id
-    @Column(name = "report_id", nullable = false)
-    public int getReportId() {
-        return reportId;
-    }
-
-    public void setReportId(int reportId) {
-        this.reportId = reportId;
-    }
-
-    @Id
-    @Column(name = "user_id", nullable = false)
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    @Id
+    @Basic
     @Column(name = "attachmenttype_id", nullable = false)
     public int getAttachmenttypeId() {
         return attachmenttypeId;
@@ -62,21 +43,30 @@ public class Attachment {
         this.attachmenttypeId = attachmenttypeId;
     }
 
+    @Basic
+    @Column(name = "report_id", nullable = false)
+    public int getReportId() {
+        return reportId;
+    }
+
+    public void setReportId(int reportId) {
+        this.reportId = reportId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Attachment that = (Attachment) o;
         return attachmentId == that.attachmentId &&
-                reportId == that.reportId &&
-                userId == that.userId &&
                 attachmenttypeId == that.attachmenttypeId &&
+                reportId == that.reportId &&
                 Objects.equals(path, that.path);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(attachmentId, path, reportId, userId, attachmenttypeId);
+        return Objects.hash(attachmentId, path, attachmenttypeId, reportId);
     }
 }
