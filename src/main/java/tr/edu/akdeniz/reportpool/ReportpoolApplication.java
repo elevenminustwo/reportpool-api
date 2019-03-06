@@ -3,10 +3,12 @@ package tr.edu.akdeniz.reportpool;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// Test comment from Mert 2
+
 @SpringBootApplication
-public class MainApplicationClass {
+public class ReportpoolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApplicationClass.class, args);
+        SpringApplication.run(ReportpoolApplication.class, args);
     }
 }

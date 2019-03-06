@@ -18,7 +18,7 @@ public class UserService implements GenericUserService {
 
     public List<UserDto> getUser(){
         return userRepository.findAll().stream()
-                .map(t -> new UserDto(t.getUserId(),t.getUsername(),t.getEmail(),t.getPassword(),t.getName(),t.getSurname()))
+                .map(t -> new UserDto(t.getUserId(),t.getUsername(),t.getEmail(),t.getPassword(),t.getName(),t.getSurname(),t.getIsActive()))
                 .collect(Collectors.toList());
     }
 

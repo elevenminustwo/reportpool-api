@@ -11,13 +11,14 @@ public class UserDto {
     private String name;
     private String surname;
 
-    public UserDto(int userId, String username, String email, String password, String name, String surname) {
+    public UserDto(int userId, String username, String email, String password, String name, String surname,int isActive) {
         this.userId = userId;
         this.username = username;
         this.email = email;
         this.password = password;
         this.name = name;
         this.surname = surname;
+        this.isActive =isActive;
     }
 
 
