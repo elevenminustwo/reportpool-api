@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5d9a9eb9-6cbc-491e-b28e-d328cecfe9e2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5d9a9eb9-6cbc-491e-b28e-d328cecfe9e2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -390,7 +388,7 @@
       <workItem from="1551728768471" duration="62000" />
       <workItem from="1551728842145" duration="2295000" />
       <workItem from="1551731187544" duration="1643000" />
-      <workItem from="1551890199572" duration="929000" />
+      <workItem from="1551890199572" duration="1293000" />
     </task>
     <task id="LOCAL-00001" summary="api start up done">
       <created>1551207709789</created>
@@ -483,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551890728643</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="database changes added">
+      <created>1551891180313</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891180313</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -519,11 +524,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12729000" />
+    <option name="totallyTimeSpent" value="13093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.32838285" />
@@ -911,7 +915,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
