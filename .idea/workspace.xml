@@ -276,7 +276,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReportpoolApplication">
+  <component name="RunManager" selected="JUnit.ReportpoolApplicationTest">
     <configuration name="ReportpoolApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tr.edu.akdeniz.reportpool.ReportpoolApplication" />
       <module name="reportpool-api" />
@@ -363,8 +363,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReportpoolApplicationTest" />
         <item itemvalue="Application.ReportpoolApplication" />
         <item itemvalue="JUnit.ReportpoolApplicationTest" />
+        <item itemvalue="Application.ReportpoolApplication" />
+        <item itemvalue="Application.ReportpoolApplication" />
       </list>
     </recent_temporary>
   </component>
