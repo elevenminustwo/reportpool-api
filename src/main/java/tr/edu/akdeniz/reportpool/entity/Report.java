@@ -1,16 +1,21 @@
 package tr.edu.akdeniz.reportpool.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@IdClass(ReportPK.class)
 public class Report {
     private int reportId;
-    private String reportText;
+    private String title;
+    private String text;
+    private Byte isCompleted;
     private Date dateCompleted;
     private int userId;
+    private int departmentunitId;
 
     @Id
     @Column(name = "ReportID", nullable = false)
@@ -23,13 +28,33 @@ public class Report {
     }
 
     @Basic
-    @Column(name = "ReportText", nullable = true, length = -1)
-    public String getReportText() {
-        return reportText;
+    @Column(name = "Title", nullable = true, length = -1)
+    public String getTitle() {
+        return title;
     }
 
-    public void setReportText(String reportText) {
-        this.reportText = reportText;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Basic
+    @Column(name = "Text", nullable = true, length = -1)
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @Basic
+    @Column(name = "IsCompleted", nullable = true)
+    public Byte getIsCompleted() {
+        return isCompleted;
+    }
+
+    public void setIsCompleted(Byte isCompleted) {
+        this.isCompleted = isCompleted;
     }
 
     @Basic
@@ -42,7 +67,7 @@ public class Report {
         this.dateCompleted = dateCompleted;
     }
 
-    @Id
+    @Basic
     @Column(name = "user_id", nullable = false)
     public int getUserId() {
         return userId;
@@ -52,6 +77,16 @@ public class Report {
         this.userId = userId;
     }
 
+    @Basic
+    @Column(name = "departmentunit_id", nullable = false)
+    public int getDepartmentunitId() {
+        return departmentunitId;
+    }
+
+    public void setDepartmentunitId(int departmentunitId) {
+        this.departmentunitId = departmentunitId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,13 +94,16 @@ public class Report {
         Report report = (Report) o;
         return reportId == report.reportId &&
                 userId == report.userId &&
-                Objects.equals(reportText, report.reportText) &&
+                departmentunitId == report.departmentunitId &&
+                Objects.equals(title, report.title) &&
+                Objects.equals(text, report.text) &&
+                Objects.equals(isCompleted, report.isCompleted) &&
                 Objects.equals(dateCompleted, report.dateCompleted);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(reportId, reportText, dateCompleted, userId);
+        return Objects.hash(reportId, title, text, isCompleted, dateCompleted, userId, departmentunitId);
     }
 }
