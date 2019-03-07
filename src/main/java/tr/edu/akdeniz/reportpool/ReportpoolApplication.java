@@ -3,7 +3,7 @@ package tr.edu.akdeniz.reportpool;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// Test comment from Mert 2
+// Push test to Mert branch
 
 @SpringBootApplication
 public class ReportpoolApplication {
