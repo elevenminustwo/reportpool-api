@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b201f5c7-1ff6-4e94-a525-9dae736b02aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/reportpool_api$ReportpoolApplication.ic" NAME="ReportpoolApplication Coverage Results" MODIFIED="1551896180714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tr.edu.akdeniz.reportpool.*</FILTER>
@@ -8,8 +18,69 @@
       <FILTER>tr.edu.akdeniz.reportpool.*</FILTER>
     </SUITE>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="reportpool-api-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reportpool-api-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552905301889" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552905359388" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="ReportpoolApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -19,5 +90,260 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="" />
+      <created>1551140182765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551140182765</updated>
+      <workItem from="1551140184337" duration="532000" />
+      <workItem from="1551201959928" duration="800000" />
+      <workItem from="1551202782029" duration="563000" />
+      <workItem from="1551203370031" duration="101000" />
+      <workItem from="1551203534818" duration="38000" />
+      <workItem from="1551203595925" duration="39000" />
+      <workItem from="1551203654854" duration="45000" />
+      <workItem from="1551203791164" duration="42000" />
+      <workItem from="1551203854081" duration="31000" />
+      <workItem from="1551203903274" duration="84000" />
+      <workItem from="1551204008719" duration="1060000" />
+      <workItem from="1551205148721" duration="296000" />
+      <workItem from="1551205451125" duration="1453000" />
+      <workItem from="1551206931342" duration="602000" />
+      <workItem from="1551208803052" duration="229000" />
+      <workItem from="1551214884744" duration="603000" />
+      <workItem from="1551352486775" duration="734000" />
+      <workItem from="1551728225724" duration="222000" />
+      <workItem from="1551728514274" duration="74000" />
+      <workItem from="1551728608894" duration="66000" />
+      <workItem from="1551728690192" duration="49000" />
+      <workItem from="1551728768471" duration="62000" />
+      <workItem from="1551728842145" duration="2295000" />
+      <workItem from="1551731187544" duration="1643000" />
+      <workItem from="1551890199572" duration="2630000" />
+      <workItem from="1552905078623" duration="11000" />
+      <workItem from="1552905107561" duration="240000" />
+    </task>
+    <task id="LOCAL-00001" summary="up to date">
+      <created>1552905346794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552905346794</updated>
+    </task>
+    <task id="LOCAL-00002" summary="api start up done">
+      <created>1551208882169</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551208882169</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test created. first test successfull.">
+      <created>1551731690956</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551731690956</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test created. first test successfull.">
+      <created>1551731813396</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551731813396</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test created. first test successfull.">
+      <created>1551731845005</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551731845005</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test created. first test successfull.">
+      <created>1551732108740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732108740</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test created. first test successfull.">
+      <created>1551732185117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732185117</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test created. first test successfull.">
+      <created>1551732247812</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732247813</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test created. first test successfull.">
+      <created>1551732463308</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732463308</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test created. first test successfull.">
+      <created>1551732535525</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732535525</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test created. first test successfull.">
+      <created>1551732555694</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732555694</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test created. first test successfull.">
+      <created>1551732803406</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551732803406</updated>
+    </task>
+    <task id="LOCAL-00013" summary="database changes added">
+      <created>1551890728642</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551890728643</updated>
+    </task>
+    <task id="LOCAL-00014" summary="database changes added">
+      <created>1551891180313</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891180313</updated>
+    </task>
+    <task id="LOCAL-00015" summary="database changes added">
+      <created>1551891520722</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891520722</updated>
+    </task>
+    <task id="LOCAL-00016" summary="database changes added">
+      <created>1551891603482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891603482</updated>
+    </task>
+    <task id="LOCAL-00017" summary="database changes added">
+      <created>1551891663059</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891663059</updated>
+    </task>
+    <task id="LOCAL-00018" summary="database changes added">
+      <created>1551891699691</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891699691</updated>
+    </task>
+    <task id="LOCAL-00019" summary="database changes added">
+      <created>1551891739667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891739667</updated>
+    </task>
+    <task id="LOCAL-00020" summary="database changes added">
+      <created>1551891831447</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551891831447</updated>
+    </task>
+    <task id="LOCAL-00021" summary="up to date">
+      <created>1551898251986</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1551898251986</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="182000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.24875896" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Persistence" order="8" sideWeight="0.35973597" side_tool="true" weight="0.24304539" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50073206" side_tool="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.23762377" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.329429" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.329429" />
+      <window_info anchor="right" id="Maven" order="11" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="api start up done" />
+    <MESSAGE value="test created. first test successfull." />
+    <MESSAGE value="database changes added" />
+    <MESSAGE value="up to date" />
+    <option name="LAST_COMMIT_MESSAGE" value="up to date" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
