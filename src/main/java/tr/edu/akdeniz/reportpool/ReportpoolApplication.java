@@ -3,7 +3,7 @@ package tr.edu.akdeniz.reportpool;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// Test comment from huusseyın 222
+// Test comment from huusseyın 22255
 
 @SpringBootApplication
 public class ReportpoolApplication {
