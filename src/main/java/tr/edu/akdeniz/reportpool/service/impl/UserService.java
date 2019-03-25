@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
 import tr.edu.akdeniz.reportpool.repository.UserRepository;
 import tr.edu.akdeniz.reportpool.service.GenericUserService;
