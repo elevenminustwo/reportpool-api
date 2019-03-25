@@ -942,378 +942,419 @@
     <table id="238" parent="6" name="userroles">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="239" parent="230" name="AttachmentID">
+    <table id="239" parent="6" name="userunit">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="240" parent="230" name="AttachmentID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="230" name="Path">
+    <column id="241" parent="230" name="Path">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="230" name="attachmenttype_id">
+    <column id="242" parent="230" name="attachmenttype_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="230" name="report_id">
+    <column id="243" parent="230" name="report_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="243" parent="230" name="AttachmentID_UNIQUE">
+    <index id="244" parent="230" name="AttachmentID_UNIQUE">
       <ColNames>AttachmentID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="244" parent="230" name="fk_attachment_attachmenttype1_idx">
+    <index id="245" parent="230" name="fk_attachment_attachmenttype1_idx">
       <ColNames>attachmenttype_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="245" parent="230" name="fk_attachment_report1_idx">
+    <index id="246" parent="230" name="fk_attachment_report1_idx">
       <ColNames>report_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="246" parent="230" name="PRIMARY">
+    <key id="247" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>AttachmentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="247" parent="230" name="AttachmentID_UNIQUE">
+    <key id="248" parent="230" name="AttachmentID_UNIQUE">
       <ColNames>AttachmentID</ColNames>
       <UnderlyingIndexName>AttachmentID_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="248" parent="230" name="fk_attachment_attachmenttype1">
+    <foreign-key id="249" parent="230" name="fk_attachment_attachmenttype1">
       <ColNames>attachmenttype_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>attachmenttype</RefTableName>
       <RefColNames>AttachmenttypeID</RefColNames>
     </foreign-key>
-    <foreign-key id="249" parent="230" name="fk_attachment_report1">
+    <foreign-key id="250" parent="230" name="fk_attachment_report1">
       <ColNames>report_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>report</RefTableName>
       <RefColNames>ReportID</RefColNames>
     </foreign-key>
-    <column id="250" parent="231" name="AttachmenttypeID">
+    <column id="251" parent="231" name="AttachmenttypeID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="231" name="Type">
+    <column id="252" parent="231" name="Type">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="252" parent="231" name="AttachmenttypeID_UNIQUE">
+    <index id="253" parent="231" name="AttachmenttypeID_UNIQUE">
       <ColNames>AttachmenttypeID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="253" parent="231" name="PRIMARY">
+    <key id="254" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>AttachmenttypeID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="254" parent="231" name="AttachmenttypeID_UNIQUE">
+    <key id="255" parent="231" name="AttachmenttypeID_UNIQUE">
       <ColNames>AttachmenttypeID</ColNames>
       <UnderlyingIndexName>AttachmenttypeID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="255" parent="232" name="DepartmentID">
+    <column id="256" parent="232" name="DepartmentID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="232" name="Name">
+    <column id="257" parent="232" name="Name">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="257" parent="232" name="DepartmentID_UNIQUE">
+    <index id="258" parent="232" name="DepartmentID_UNIQUE">
       <ColNames>DepartmentID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="258" parent="232" name="PRIMARY">
+    <key id="259" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>DepartmentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="259" parent="232" name="DepartmentID_UNIQUE">
+    <key id="260" parent="232" name="DepartmentID_UNIQUE">
       <ColNames>DepartmentID</ColNames>
       <UnderlyingIndexName>DepartmentID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="260" parent="233" name="DepartmentUnitID">
+    <column id="261" parent="233" name="DepartmentUnitID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="233" name="department_id">
+    <column id="262" parent="233" name="department_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="233" name="unit_id">
+    <column id="263" parent="233" name="unit_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="263" parent="233" name="DepartmentUnitID_UNIQUE">
+    <index id="264" parent="233" name="DepartmentUnitID_UNIQUE">
       <ColNames>DepartmentUnitID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="264" parent="233" name="fk_departmentunit_department1_idx">
+    <index id="265" parent="233" name="fk_departmentunit_department1_idx">
       <ColNames>department_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="265" parent="233" name="fk_departmentunit_unit1_idx">
+    <index id="266" parent="233" name="fk_departmentunit_unit1_idx">
       <ColNames>unit_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="266" parent="233" name="PRIMARY">
+    <key id="267" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>DepartmentUnitID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="267" parent="233" name="DepartmentUnitID_UNIQUE">
+    <key id="268" parent="233" name="DepartmentUnitID_UNIQUE">
       <ColNames>DepartmentUnitID</ColNames>
       <UnderlyingIndexName>DepartmentUnitID_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="268" parent="233" name="fk_departmentunit_department1">
+    <foreign-key id="269" parent="233" name="fk_departmentunit_department1">
       <ColNames>department_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>department</RefTableName>
       <RefColNames>DepartmentID</RefColNames>
     </foreign-key>
-    <foreign-key id="269" parent="233" name="fk_departmentunit_unit1">
+    <foreign-key id="270" parent="233" name="fk_departmentunit_unit1">
       <ColNames>unit_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>unit</RefTableName>
       <RefColNames>UnitID</RefColNames>
     </foreign-key>
-    <column id="270" parent="234" name="ReportID">
+    <column id="271" parent="234" name="ReportID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="234" name="Title">
+    <column id="272" parent="234" name="Title">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="234" name="Text">
+    <column id="273" parent="234" name="Text">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="234" name="IsCompleted">
+    <column id="274" parent="234" name="IsCompleted">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="234" name="DateCompleted">
+    <column id="275" parent="234" name="DateCompleted">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="234" name="user_id">
+    <column id="276" parent="234" name="user_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="234" name="departmentunit_id">
+    <column id="277" parent="234" name="departmentunit_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="277" parent="234" name="fk_report_user1_idx">
+    <index id="278" parent="234" name="fk_report_user1_idx">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="278" parent="234" name="fk_report_departmentunit1_idx">
+    <index id="279" parent="234" name="fk_report_departmentunit1_idx">
       <ColNames>departmentunit_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="279" parent="234" name="PRIMARY">
+    <key id="280" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ReportID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="280" parent="234" name="fk_report_user1">
+    <foreign-key id="281" parent="234" name="fk_report_user1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>UserID</RefColNames>
     </foreign-key>
-    <foreign-key id="281" parent="234" name="fk_report_departmentunit1">
+    <foreign-key id="282" parent="234" name="fk_report_departmentunit1">
       <ColNames>departmentunit_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>departmentunit</RefTableName>
       <RefColNames>DepartmentUnitID</RefColNames>
     </foreign-key>
-    <column id="282" parent="235" name="RoleID">
+    <column id="283" parent="235" name="RoleID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="235" name="Rolename">
+    <column id="284" parent="235" name="Rolename">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="284" parent="235" name="RoleID_UNIQUE">
+    <index id="285" parent="235" name="RoleID_UNIQUE">
       <ColNames>RoleID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="285" parent="235" name="PRIMARY">
+    <key id="286" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>RoleID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="286" parent="235" name="RoleID_UNIQUE">
+    <key id="287" parent="235" name="RoleID_UNIQUE">
       <ColNames>RoleID</ColNames>
       <UnderlyingIndexName>RoleID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="287" parent="236" name="UnitID">
+    <column id="288" parent="236" name="UnitID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="236" name="Name">
+    <column id="289" parent="236" name="Name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="289" parent="236" name="UnitID_UNIQUE">
+    <index id="290" parent="236" name="UnitID_UNIQUE">
       <ColNames>UnitID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="290" parent="236" name="PRIMARY">
+    <key id="291" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UnitID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="291" parent="236" name="UnitID_UNIQUE">
+    <key id="292" parent="236" name="UnitID_UNIQUE">
       <ColNames>UnitID</ColNames>
       <UnderlyingIndexName>UnitID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="292" parent="237" name="UserID">
+    <column id="293" parent="237" name="UserID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="237" name="Username">
+    <column id="294" parent="237" name="Username">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="237" name="Email">
+    <column id="295" parent="237" name="Email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="237" name="Password">
+    <column id="296" parent="237" name="Password">
       <Position>4</Position>
       <DataType>tinytext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="237" name="IsActive">
+    <column id="297" parent="237" name="IsActive">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="237" name="Name">
+    <column id="298" parent="237" name="Name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="237" name="Surname">
+    <column id="299" parent="237" name="Surname">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="299" parent="237" name="UserID_UNIQUE">
+    <index id="300" parent="237" name="UserID_UNIQUE">
       <ColNames>UserID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="300" parent="237" name="PRIMARY">
+    <key id="301" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UserID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="301" parent="237" name="UserID_UNIQUE">
+    <key id="302" parent="237" name="UserID_UNIQUE">
       <ColNames>UserID</ColNames>
       <UnderlyingIndexName>UserID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="302" parent="238" name="user_id">
+    <column id="303" parent="238" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="238" name="role_id">
+    <column id="304" parent="238" name="role_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="304" parent="238" name="fk_UserRoles_User_idx">
+    <index id="305" parent="238" name="fk_UserRoles_User_idx">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="305" parent="238" name="fk_UserRoles_Role1_idx">
+    <index id="306" parent="238" name="fk_UserRoles_Role1_idx">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="238" name="PRIMARY">
+    <key id="307" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="307" parent="238" name="fk_UserRoles_User">
+    <foreign-key id="308" parent="238" name="fk_UserRoles_User">
       <ColNames>user_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>UserID</RefColNames>
     </foreign-key>
-    <foreign-key id="308" parent="238" name="fk_UserRoles_Role1">
+    <foreign-key id="309" parent="238" name="fk_UserRoles_Role1">
       <ColNames>role_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>role</RefTableName>
       <RefColNames>RoleID</RefColNames>
+    </foreign-key>
+    <column id="310" parent="239" name="unit_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="239" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="312" parent="239" name="fk_unit_has_user_unit1_idx">
+      <ColNames>unit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="313" parent="239" name="fk_unit_has_user_user1_idx">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="314" parent="239" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>unit_id
+user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="315" parent="239" name="fk_unit_has_user_unit1">
+      <ColNames>unit_id</ColNames>
+      <RefSchemaName>reportpool</RefSchemaName>
+      <RefTableName>unit</RefTableName>
+      <RefColNames>UnitID</RefColNames>
+    </foreign-key>
+    <foreign-key id="316" parent="239" name="fk_unit_has_user_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>reportpool</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
