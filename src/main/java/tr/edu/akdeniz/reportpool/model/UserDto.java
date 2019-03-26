@@ -20,7 +20,10 @@ public class UserDto {
         this.surname = surname;
         this.isActive =isActive;
     }
-
+    public UserDto(int userId, String username) {
+        this.userId = userId;
+        this.username = username;
+    }
 
     public Serializable getPassword() {
         return password;
