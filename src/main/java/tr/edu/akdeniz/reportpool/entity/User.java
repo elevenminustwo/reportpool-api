@@ -13,7 +13,7 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private int isActive;
+    private Byte isActive;
     private String name;
     private String surname;
 
@@ -59,11 +59,11 @@ public class User {
 
     @Basic
     @Column(name = "IsActive", nullable = true)
-    public int getIsActive() {
+    public Byte getIsActive() {
         return isActive;
     }
 
-    public void setIsActive(int isActive) {
+    public void setIsActive(Byte isActive) {
         this.isActive = isActive;
     }
 

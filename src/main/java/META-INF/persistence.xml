@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
-    <persistence-unit name="NewPersistenceUnit">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <persistence-unit name="persistenceUnit">
         <class>tr.edu.akdeniz.reportpool.entity.Attachment</class>
         <class>tr.edu.akdeniz.reportpool.entity.Attachmenttype</class>
-        <class>tr.edu.akdeniz.reportpool.entity.Report</class>
-        <class>tr.edu.akdeniz.reportpool.entity.Role</class>
-        <class>tr.edu.akdeniz.reportpool.entity.User</class>
-        <class>tr.edu.akdeniz.reportpool.entity.Userroles</class>
         <class>tr.edu.akdeniz.reportpool.entity.Department</class>
         <class>tr.edu.akdeniz.reportpool.entity.Departmentunit</class>
+        <class>tr.edu.akdeniz.reportpool.entity.Report</class>
+        <class>tr.edu.akdeniz.reportpool.entity.Role</class>
         <class>tr.edu.akdeniz.reportpool.entity.Unit</class>
+        <class>tr.edu.akdeniz.reportpool.entity.User</class>
+        <class>tr.edu.akdeniz.reportpool.entity.Userroles</class>
+        <class>tr.edu.akdeniz.reportpool.entity.Userunit</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3308/reportpool"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username" value=""/>
-            <property name="hibernate.connection.password" value=""/>
-            <property name="hibernate.archive.autodetection" value="class"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-            <property name="hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>
