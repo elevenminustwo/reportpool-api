@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/Userunit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/UserunitPK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportpool-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/reportpool-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/model/UserDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,59 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReportpoolApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReportpoolApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/GenericUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="25" column="94" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportpoolApplicationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -749,13 +693,17 @@
       <option name="project" value="LOCAL" />
       <updated>1551898251986</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="new table">
+      <created>1553551134095</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1553551134095</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReportpoolApplicationTest - 2019.03.04 at 23h 31m 48s.xml">
-      <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ReportpoolApplicationTest - 2019.03.04 at 23h 32m 26s.xml">
       <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
     </history-entry>
@@ -783,9 +731,12 @@
     <history-entry file="ReportpoolApplicationTest - 2019.03.26 at 00h 36m 43s.xml">
       <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ReportpoolApplicationTest - 2019.03.26 at 00h 58m 25s.xml">
+      <configuration name="ReportpoolApplicationTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24375000" />
+    <option name="totallyTimeSpent" value="24505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -803,7 +754,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.23762377" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.23762377" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
@@ -866,7 +817,8 @@
     <MESSAGE value="test created. first test successfull." />
     <MESSAGE value="database changes added" />
     <MESSAGE value="up to date" />
-    <option name="LAST_COMMIT_MESSAGE" value="up to date" />
+    <MESSAGE value="new table" />
+    <option name="LAST_COMMIT_MESSAGE" value="new table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1182,10 +1134,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="255">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/GenericUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -1199,24 +1165,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/GenericUserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/ReportpoolApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="25" column="94" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="187">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
