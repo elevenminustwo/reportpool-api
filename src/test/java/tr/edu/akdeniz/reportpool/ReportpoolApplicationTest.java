@@ -28,6 +28,11 @@ public class ReportpoolApplicationTest {
         get("/api/tdd/getUser");
     }
 
+    @Test
+    public void gePersonsTest(){
+        post("/api/tdd/getPersons");
+    }
+
     @Before
     public void setBaseUri () {
 
