@@ -1,9 +1,12 @@
 package tr.edu.akdeniz.reportpool;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.glass.ui.Application;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,8 +14,11 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static com.jayway.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
-import com.jayway.restassured.RestAssured;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.jayway.restassured.RestAssured;
+import tr.edu.akdeniz.reportpool.entity.Report;
+import tr.edu.akdeniz.reportpool.model.UnitReportDto;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -23,14 +29,30 @@ public class ReportpoolApplicationTest {
     @Value("${server.port}")
     int port;
 
+    @Autowired
+    ObjectMapper objectMapper;
+
     @Test
     public void getUsersTest(){
-        get("/api/tdd/getUser");
+        get("/api/tdd/getUser").getBody().print();
     }
 
     @Test
-    public void gePersonsTest(){
-        post("/api/tdd/getPersons");
+    public void getPersonsTest(){
+        post("/api/tdd/getPersons").getBody().print();
+    }
+
+    @Test
+    public void addReportTest() throws JsonProcessingException {
+        post ("tdd/savereport").getBody().print();
+    }
+    @Test
+    public void getUnitReportsTest(){
+        get("tdd/unitreports/1").getBody().print();
+    }
+    @Test
+    public void getAllReportsTest(){
+        get("tdd/allreports").getBody().print();
     }
 
     @Before

@@ -41,9 +41,22 @@ public class AdminController {
         String jsonString = gson.toJson(paginationDto);
         return jsonString;
     }
-    @RequestMapping(value = "/api/tdd/getPersons", method= RequestMethod.POST)
-    public PaginationDto getUserTest() {
-        return null;
+    @RequestMapping(value = "/api/tdd/getPersons")
+    @CrossOrigin
+    public String getUserTest(HttpServletRequest request) throws JsonProcessingException {
+        Enumeration<String> parameterNames = request.getParameterNames();
+        Gson gson = new Gson();
+        String search = request.getParameter("search[value]");
+        String sortColumnIndex = request.getParameter("order[0][column]");
+        String sortDir = request.getParameter("order[0][dir]");
+        String skip = request.getParameter("start");
+        String length = request.getParameter("length");
+        String draw = request.getParameter("draw");
+
+        PaginationDto paginationDto = userService.getPersons("0","10","0","0","0","");
+
+        String jsonString = gson.toJson(paginationDto);
+        return jsonString;
     }
 
 }

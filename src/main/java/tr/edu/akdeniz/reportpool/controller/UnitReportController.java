@@ -12,9 +12,16 @@ public class UnitReportController {
 
     @Autowired
     UnitReportService unitReportService;
+
     @CrossOrigin
     @RequestMapping(value = "/unitreports/{id}",method = RequestMethod.GET)
     public List<UnitReportDto> getUnitReports(@PathVariable int id){
       return  unitReportService.getUnitReports(id);
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "tdd/unitreports/{id}",method = RequestMethod.GET)
+    public List<UnitReportDto> getUnitReportsTest(@PathVariable int id){
+        return  unitReportService.getUnitReports(id);
     }
 }
