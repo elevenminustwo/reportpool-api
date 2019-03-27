@@ -2,30 +2,20 @@ package tr.edu.akdeniz.reportpool.model;
 
 public class PersonDto {
 
-    private int userId;
+    private String userId;
     private String username;
     private String email;
     private String password;
-    private int isActive;
+    private String isActive;
     private String name;
     private String surname;
     private String role;
     private String unit;
 
-    public PersonDto(String username, String email, int isActive, String name, String surname) {
-        this.username = username;
-        this.email = email;
-        this.isActive = isActive;
-        this.name = name;
-        this.surname = surname;
-    }
-
-
-    public PersonDto(int userId, String username, String email, String password, int isActive, String name, String surname, String role, String unit) {
+    public PersonDto(String userId, String username, String name, String surname,String email,String isActive, String role, String unit) {
         this.userId = userId;
         this.username = username;
         this.email = email;
-        this.password = password;
         this.isActive = isActive;
         this.name = name;
         this.surname = surname;
@@ -51,11 +41,11 @@ public class PersonDto {
 
 
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -83,11 +73,11 @@ public class PersonDto {
         this.password = password;
     }
 
-    public int getIsActive() {
+    public String getIsActive() {
         return isActive;
     }
 
-    public void setIsActive(int isActive) {
+    public void setIsActive(String isActive) {
         this.isActive = isActive;
     }
 

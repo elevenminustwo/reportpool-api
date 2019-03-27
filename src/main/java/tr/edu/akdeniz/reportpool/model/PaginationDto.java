@@ -1,18 +1,19 @@
 package tr.edu.akdeniz.reportpool.model;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 public class PaginationDto {
     public int draw;
     public int recordsFiltered;
     public int recordsTotal;
-    public List array;
+    public List<?> array;
 
     public PaginationDto(){
 
     }
 
-    public PaginationDto(int draw, int recordsFiltered, int recordsTotal, List array) {
+    public PaginationDto(int draw, int recordsFiltered, int recordsTotal, List<?> array) {
         this.draw = draw;
         this.recordsFiltered = recordsFiltered;
         this.recordsTotal = recordsTotal;
@@ -43,11 +44,11 @@ public class PaginationDto {
         this.recordsTotal = recordsTotal;
     }
 
-    public List getArray() {
+    public List<?> getArray() {
         return array;
     }
 
-    public void setArray(List array) {
+    public void setArray(List<?> array) {
         this.array = array;
     }
 }
