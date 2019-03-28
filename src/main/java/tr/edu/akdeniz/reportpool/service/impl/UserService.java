@@ -55,7 +55,8 @@ public class UserService implements GenericUserService {
 
         Query q = entityManager
                 .createNativeQuery(
-                        "SELECT u.Username as ?1," +
+                        "SELECT u.UserID as ?0," +
+                                "u.Username as ?1," +
                                 "u.Name as ?2 ," +
                                 "u.Surname as ?3," +
                                 "u.Email as ?4," +
@@ -68,6 +69,7 @@ public class UserService implements GenericUserService {
                                 " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
                                 " WHERE u.Username LIKE ?7" +
                                 " ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
+                .setParameter(0,"userid")
                 .setParameter(1,"username")
                 .setParameter(2,"name")
                 .setParameter(3,"surname")

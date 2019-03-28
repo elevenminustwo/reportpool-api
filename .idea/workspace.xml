@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/PaginationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/PaginationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tr/edu/akdeniz/reportpool/ReportpoolApplicationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,8 +74,8 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="156">
+              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="64" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -649,7 +646,7 @@
       <workItem from="1553643705566" duration="5076000" />
       <workItem from="1553681940626" duration="682000" />
       <workItem from="1553771374918" duration="5632000" />
-      <workItem from="1553778555248" duration="3972000" />
+      <workItem from="1553778555248" duration="5835000" />
     </task>
     <task id="LOCAL-00001" summary="api start up done">
       <created>1551207709789</created>
@@ -812,7 +809,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553648843539</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="almost">
+      <created>1553782633213</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1553782633213</updated>
+    </task>
+    <task id="LOCAL-00025" summary="done">
+      <created>1553783539874</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1553783539874</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -848,7 +859,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67552000" />
+    <option name="totallyTimeSpent" value="69415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -931,7 +942,8 @@
     <MESSAGE value="up to date" />
     <MESSAGE value="test" />
     <MESSAGE value="almost" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1285,8 +1297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="156">
+          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="64" selection-end-column="48" />
         </state>
       </provider>
     </entry>
