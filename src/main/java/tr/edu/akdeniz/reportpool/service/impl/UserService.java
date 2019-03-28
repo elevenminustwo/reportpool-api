@@ -77,7 +77,16 @@ public class UserService implements GenericUserService {
                 .setParameter(7,"%"+search+"%")
                 .setMaxResults(Integer.parseInt(length))
                 .setFirstResult(Integer.parseInt(skip));
-        int recordsTotal = q.getResultList().size();
+        int recordsTotal = ((Number)entityManager
+                .createNativeQuery(
+                        "SELECT COUNT(*) FROM user u" +
+                                " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
+                                " LEFT JOIN role r on u2.role_id = r.RoleID"+
+                                " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
+                                " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
+                                " WHERE u.Username LIKE ?7 " )
+                                .setParameter(7,"%"+search+"%")
+                                .getSingleResult()).intValue();
         PaginationDto paginationDto = new PaginationDto(Integer.parseInt(draw),recordsTotal-Integer.parseInt(skip),recordsTotal,q.getResultList());
 
         return paginationDto;
