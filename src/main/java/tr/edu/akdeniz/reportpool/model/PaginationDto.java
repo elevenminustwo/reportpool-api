@@ -5,19 +5,19 @@ import java.util.List;
 
 public class PaginationDto {
     public int draw;
-    public int recordsFiltered;
     public int recordsTotal;
-    public List<?> array;
+    public int recordsFiltered;
+    public List<Object[]> data;
 
     public PaginationDto(){
 
     }
 
-    public PaginationDto(int draw, int recordsFiltered, int recordsTotal, List<?> array) {
+    public PaginationDto(int draw, int recordsFiltered, int recordsTotal, List<Object[]> data) {
         this.draw = draw;
         this.recordsFiltered = recordsFiltered;
         this.recordsTotal = recordsTotal;
-        this.array = array;
+        this.data = data;
     }
 
     public int getDraw() {
@@ -44,11 +44,11 @@ public class PaginationDto {
         this.recordsTotal = recordsTotal;
     }
 
-    public List<?> getArray() {
-        return array;
+    public List<Object[]> getArray() {
+        return data;
     }
 
-    public void setArray(List<?> array) {
-        this.array = array;
+    public void setArray(List<Object[]> data) {
+        this.data = data;
     }
 }
