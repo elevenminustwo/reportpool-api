@@ -1,9 +1,6 @@
 package tr.edu.akdeniz.reportpool.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +11,7 @@ public class Userroles {
 
     @Id
     @Column(name = "user_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getUserId() {
         return userId;
     }
@@ -24,6 +22,7 @@ public class Userroles {
 
     @Id
     @Column(name = "role_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getRoleId() {
         return roleId;
     }

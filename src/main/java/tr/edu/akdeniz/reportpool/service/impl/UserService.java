@@ -2,11 +2,17 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.hibernate.jpa.internal.schemagen.ScriptTargetOutputToFile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import tr.edu.akdeniz.reportpool.entity.Userroles;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.PersonDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
+import tr.edu.akdeniz.reportpool.model.UserrolesDto;
 import tr.edu.akdeniz.reportpool.repository.UserRepository;
+import tr.edu.akdeniz.reportpool.repository.UserroleRepository;
 import tr.edu.akdeniz.reportpool.service.GenericUserService;
 
 import javax.persistence.*;
@@ -19,6 +25,9 @@ public class UserService implements GenericUserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    UserroleRepository userroleRepository;
 
     @Autowired
     EntityManager entityManager;
@@ -93,6 +102,22 @@ public class UserService implements GenericUserService {
 
         return paginationDto;
     }
+
+    public ResponseEntity addRole(UserrolesDto userrolesDto){
+        Userroles userroles = new Userroles();
+        userroles.setRoleId(userrolesDto.getRoleId());
+        userroles.setUserId(userrolesDto.getUserId());
+        userroleRepository.save(userroles);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+    public ResponseEntity delRole(UserrolesDto userrolesDto){
+        Userroles userroles = userroleRepository.findByUserId(userrolesDto.getUserId());
+        if(userroles!=null){
+            userroleRepository.delete(userroles);
+        }
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
 
 
 
