@@ -8,9 +8,11 @@ import javafx.scene.control.Pagination;
 import org.apache.http.protocol.HTTP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
+import tr.edu.akdeniz.reportpool.model.UserrolesDto;
 import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -58,5 +60,17 @@ public class AdminController {
         String jsonString = gson.toJson(paginationDto);
         return jsonString;
     }
+
+    @RequestMapping(value = "/api/addRole")
+    @CrossOrigin
+    public ResponseEntity addRole(@RequestBody UserrolesDto userrolesDto) {
+        return userService.addRole(userrolesDto);
+    }
+    @RequestMapping(value = "/api/delRole")
+    @CrossOrigin
+    public ResponseEntity delRole(@RequestBody UserrolesDto userrolesDto) {
+        return userService.delRole(userrolesDto);
+    }
+
 
 }
