@@ -30,39 +30,66 @@ public class UserService implements GenericUserService {
                 .collect(Collectors.toList());
     }
     public PaginationDto getPersons(String draw,String length,String skip,String sortDir,String sortColumnIndex,String search){
+
+        switch (Integer.parseInt(sortColumnIndex)){
+            case 0:
+                sortColumnIndex="username";
+                break;
+            case 1:
+                sortColumnIndex="name";
+                break;
+            case 2:
+                sortColumnIndex="surname";
+                break;
+            case 3:
+                sortColumnIndex="email";
+                break;
+            case 4:
+                sortColumnIndex="rolename";
+                break;
+            case 5:
+                sortColumnIndex="unitname";
+                break;
+
+        }
+
         Query q = entityManager
                 .createNativeQuery(
-                        "SELECT u.UserID as userId," +
-                                "u.Username as username," +
-                                "u.Name as name ," +
-                                "u.Surname as surname," +
-                                "u.Email as email," +
-                                "u.IsActive as isActive," +
-                                "r.RoleName as rolename," +
-                                "u4.Name as unit" +
+                        "SELECT u.UserID as ?0," +
+                                "u.Username as ?1," +
+                                "u.Name as ?2 ," +
+                                "u.Surname as ?3," +
+                                "u.Email as ?4," +
+                                "r.RoleName as ?5," +
+                                "u4.Name as ?6" +
                                 " FROM user u" +
                                 " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
                                 " LEFT JOIN role r on u2.role_id = r.RoleID"+
                                 " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
                                 " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
-                                " WHERE u.Username LIKE ?1" +
-                                " ORDER BY ?2 ?3")
-                .setParameter(1,"%"+search+"%")
-                .setParameter(2,sortColumnIndex)
-                .setParameter(3,sortDir)
+                                " WHERE u.Username LIKE ?7" +
+                                " ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
+                .setParameter(0,"userid")
+                .setParameter(1,"username")
+                .setParameter(2,"name")
+                .setParameter(3,"surname")
+                .setParameter(4,"email")
+                .setParameter(5,"rolename")
+                .setParameter(6,"unitname")
+                .setParameter(7,"%"+search+"%")
                 .setMaxResults(Integer.parseInt(length))
                 .setFirstResult(Integer.parseInt(skip));
-        int recordsTotal = q.getResultList().size();
-        PaginationDto paginationDto = new PaginationDto();
-        paginationDto.setDraw(Integer.parseInt(draw));
-        paginationDto.setRecordsFiltered(recordsTotal-Integer.parseInt(skip));
-        paginationDto.setRecordsTotal(recordsTotal);
-        List<Object[]> list = q.getResultList();
-        List<PersonDto> personDtos = new ArrayList<>();
-        for (Object[] a : list) {
-            personDtos.add(new PersonDto(a[0].toString(),a[1].toString(),a[2].toString(),a[3].toString(),a[4].toString(),a[5].toString(),"",""));
-        }
-        paginationDto.setArray(personDtos);
+        int recordsTotal = ((Number)entityManager
+                .createNativeQuery(
+                        "SELECT COUNT(*) FROM user u" +
+                                " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
+                                " LEFT JOIN role r on u2.role_id = r.RoleID"+
+                                " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
+                                " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
+                                " WHERE u.Username LIKE ?7 " )
+                                .setParameter(7,"%"+search+"%")
+                                .getSingleResult()).intValue();
+        PaginationDto paginationDto = new PaginationDto(Integer.parseInt(draw),recordsTotal-Integer.parseInt(skip),recordsTotal,q.getResultList());
 
         return paginationDto;
     }
