@@ -42,21 +42,27 @@ public class UserService implements GenericUserService {
 
         switch (Integer.parseInt(sortColumnIndex)){
             case 0:
-                sortColumnIndex="username";
+                sortColumnIndex="userid";
                 break;
             case 1:
-                sortColumnIndex="name";
+                sortColumnIndex="username";
                 break;
             case 2:
-                sortColumnIndex="surname";
+                sortColumnIndex="name";
                 break;
             case 3:
-                sortColumnIndex="email";
+                sortColumnIndex="surname";
                 break;
             case 4:
-                sortColumnIndex="rolename";
+                sortColumnIndex="email";
                 break;
             case 5:
+                sortColumnIndex="isactive";
+                break;
+            case 6:
+                sortColumnIndex="rolename";
+                break;
+            case 7:
                 sortColumnIndex="unitname";
                 break;
 
@@ -68,24 +74,26 @@ public class UserService implements GenericUserService {
                                 "u.Username as ?1," +
                                 "u.Name as ?2 ," +
                                 "u.Surname as ?3," +
-                                "u.Email as ?4," +
-                                "r.RoleName as ?5," +
-                                "u4.Name as ?6" +
+                                "u.Email as ?4, " +
+                                "u.IsActive as ?5," +
+                                "r.RoleName as ?6," +
+                                "u4.Name as ?7" +
                                 " FROM user u" +
                                 " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
                                 " LEFT JOIN role r on u2.role_id = r.RoleID"+
                                 " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
                                 " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
-                                " WHERE u.Username LIKE ?7" +
+                                " WHERE u.Username LIKE ?8" +
                                 " ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
                 .setParameter(0,"userid")
                 .setParameter(1,"username")
                 .setParameter(2,"name")
                 .setParameter(3,"surname")
                 .setParameter(4,"email")
-                .setParameter(5,"rolename")
-                .setParameter(6,"unitname")
-                .setParameter(7,"%"+search+"%")
+                .setParameter(5, "isactive")
+                .setParameter(6,"rolename")
+                .setParameter(7,"unitname")
+                .setParameter(8,"%"+search+"%")
                 .setMaxResults(Integer.parseInt(length))
                 .setFirstResult(Integer.parseInt(skip));
         int recordsTotal = ((Number)entityManager
