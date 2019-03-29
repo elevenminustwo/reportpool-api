@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="done">
+    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/entity/Userroles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/entity/Userroles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +73,8 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -188,8 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +307,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -647,7 +646,8 @@
       <workItem from="1553681940626" duration="682000" />
       <workItem from="1553771374918" duration="5632000" />
       <workItem from="1553778555248" duration="5835000" />
-      <workItem from="1553806571854" duration="1175000" />
+      <workItem from="1553806571854" duration="2513000" />
+      <workItem from="1553854187091" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="api start up done">
       <created>1551207709789</created>
@@ -824,7 +824,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553783539874</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="a bit changes">
+      <created>1553807861469</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1553807861469</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -860,10 +867,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70773000" />
+    <option name="totallyTimeSpent" value="72754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014641" side_tool="true" weight="0.39933994" />
@@ -883,24 +891,24 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.32673267" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info id="Persistence" order="8" sideWeight="0.35973597" side_tool="true" weight="0.24304539" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.2693997" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.2693997" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32869694" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven" order="11" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32869694" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -943,7 +951,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="almost" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="a bit changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="a bit changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1300,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="120">
+          <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
         </state>
       </provider>
     </entry>
