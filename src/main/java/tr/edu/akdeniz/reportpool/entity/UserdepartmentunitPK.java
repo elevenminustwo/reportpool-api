@@ -5,18 +5,18 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class UserunitPK implements Serializable {
-    private int unitId;
+public class UserdepartmentunitPK implements Serializable {
+    private int departmentunitId;
     private int userId;
 
-    @Column(name = "unit_id", nullable = false)
+    @Column(name = "departmentunit_id", nullable = false)
     @Id
-    public int getUnitId() {
-        return unitId;
+    public int getDepartmentunitId() {
+        return departmentunitId;
     }
 
-    public void setUnitId(int unitId) {
-        this.unitId = unitId;
+    public void setDepartmentunitId(int departmentunitId) {
+        this.departmentunitId = departmentunitId;
     }
 
     @Column(name = "user_id", nullable = false)
@@ -33,14 +33,14 @@ public class UserunitPK implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserunitPK that = (UserunitPK) o;
-        return unitId == that.unitId &&
+        UserdepartmentunitPK that = (UserdepartmentunitPK) o;
+        return departmentunitId == that.departmentunitId &&
                 userId == that.userId;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(unitId, userId);
+        return Objects.hash(departmentunitId, userId);
     }
 }
