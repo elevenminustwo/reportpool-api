@@ -12,6 +12,7 @@
         <class>tr.edu.akdeniz.reportpool.entity.User</class>
         <class>tr.edu.akdeniz.reportpool.entity.Userroles</class>
         <class>tr.edu.akdeniz.reportpool.entity.Userunit</class>
+        <class>tr.edu.akdeniz.reportpool.entity.Userdepartmentunit</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3308/reportpool"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

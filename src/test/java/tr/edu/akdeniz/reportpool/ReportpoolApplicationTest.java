@@ -2,7 +2,6 @@ package tr.edu.akdeniz.reportpool;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.glass.ui.Application;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,12 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static com.jayway.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.jayway.restassured.RestAssured;
-import tr.edu.akdeniz.reportpool.entity.Report;
-import tr.edu.akdeniz.reportpool.model.UnitReportDto;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

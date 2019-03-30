@@ -1,14 +1,11 @@
 package tr.edu.akdeniz.reportpool.service.impl;
 
-import org.hibernate.jpa.internal.schemagen.ScriptTargetOutputToFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.entity.Userroles;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
-import tr.edu.akdeniz.reportpool.model.PersonDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
 import tr.edu.akdeniz.reportpool.model.UserrolesDto;
 import tr.edu.akdeniz.reportpool.repository.UserRepository;
@@ -16,7 +13,6 @@ import tr.edu.akdeniz.reportpool.repository.UserroleRepository;
 import tr.edu.akdeniz.reportpool.service.GenericUserService;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +31,7 @@ public class UserService implements GenericUserService {
 
     public List<UserDto> getUser(){
         return userRepository.findAll().stream()
-                .map(t -> new UserDto(t.getUserId(),t.getUsername(),t.getEmail(),t.getPassword(),t.getName(),t.getSurname(),t.getIsActive()))
+                .map(t -> new UserDto(t.getUserId(),t.getUsername(),t.getEmail(),t.getPassword().toString(),t.getName(),t.getSurname(),t.getIsActive()))
                 .collect(Collectors.toList());
     }
     public PaginationDto getPersons(String draw,String length,String skip,String sortDir,String sortColumnIndex,String search){
@@ -77,12 +73,13 @@ public class UserService implements GenericUserService {
                                 "u.Email as ?4, " +
                                 "u.IsActive as ?5," +
                                 "r.RoleName as ?6," +
-                                "u4.Name as ?7" +
+                                "u5.Name as ?7" +
                                 " FROM user u" +
                                 " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
                                 " LEFT JOIN role r on u2.role_id = r.RoleID"+
-                                " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
-                                " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
+                                " LEFT JOIN userdepartmentunit u3 on u.UserID = u3.user_id" +
+                                " LEFT JOIN departmentunit u4 on u3.departmentunit_id = u4.DepartmentUnitID" +
+                                " LEFT JOIN unit u5 on u4.unit_id = u5.UnitID" +
                                 " WHERE u.Username LIKE ?8" +
                                 " ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
                 .setParameter(0,"userid")
@@ -101,8 +98,9 @@ public class UserService implements GenericUserService {
                         "SELECT COUNT(*) FROM user u" +
                                 " LEFT JOIN userroles u2 on u.UserID = u2.user_id" +
                                 " LEFT JOIN role r on u2.role_id = r.RoleID"+
-                                " LEFT JOIN userunit u3 on u.UserID = u3.user_id" +
-                                " LEFT JOIN unit u4 on u3.unit_id = u4.UnitID" +
+                                " LEFT JOIN userdepartmentunit u3 on u.UserID = u3.user_id" +
+                                " LEFT JOIN departmentunit u4 on u3.departmentunit_id = u4.DepartmentUnitID" +
+                                " LEFT JOIN unit u5 on u4.unit_id = u5.UnitID" +
                                 " WHERE u.Username LIKE ?7 " )
                                 .setParameter(7,"%"+search+"%")
                                 .getSingleResult()).intValue();
