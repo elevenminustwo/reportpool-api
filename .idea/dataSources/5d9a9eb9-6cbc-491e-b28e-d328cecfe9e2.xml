@@ -986,8 +986,8 @@
     <table id="252" parent="10" name="role"/>
     <table id="253" parent="10" name="unit"/>
     <table id="254" parent="10" name="user"/>
-    <table id="255" parent="10" name="userroles"/>
-    <table id="256" parent="10" name="userunit"/>
+    <table id="255" parent="10" name="userdepartmentunit"/>
+    <table id="256" parent="10" name="userroles"/>
     <column id="257" parent="247" name="AttachmentID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -1323,81 +1323,81 @@
       <ColNames>UserID</ColNames>
       <UnderlyingIndexName>UserID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="320" parent="255" name="user_id">
+    <column id="320" parent="255" name="departmentunit_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="255" name="role_id">
+    <column id="321" parent="255" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="322" parent="255" name="fk_UserRoles_User_idx">
+    <index id="322" parent="255" name="fk_departmentunit_has_user_departmentunit1_idx">
+      <ColNames>departmentunit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="323" parent="255" name="fk_departmentunit_has_user_user1_idx">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="323" parent="255" name="fk_UserRoles_Role1_idx">
+    <key id="324" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>departmentunit_id
+user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="325" parent="255" name="fk_departmentunit_has_user_departmentunit1">
+      <ColNames>departmentunit_id</ColNames>
+      <RefSchemaName>reportpool</RefSchemaName>
+      <RefTableName>departmentunit</RefTableName>
+      <RefColNames>DepartmentUnitID</RefColNames>
+    </foreign-key>
+    <foreign-key id="326" parent="255" name="fk_departmentunit_has_user_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>reportpool</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <column id="327" parent="256" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="328" parent="256" name="role_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="329" parent="256" name="fk_UserRoles_User_idx">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="330" parent="256" name="fk_UserRoles_Role1_idx">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="324" parent="255" name="PRIMARY">
+    <key id="331" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="325" parent="255" name="fk_UserRoles_User">
+    <foreign-key id="332" parent="256" name="fk_UserRoles_User">
       <ColNames>user_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>UserID</RefColNames>
     </foreign-key>
-    <foreign-key id="326" parent="255" name="fk_UserRoles_Role1">
+    <foreign-key id="333" parent="256" name="fk_UserRoles_Role1">
       <ColNames>role_id</ColNames>
       <RefSchemaName>reportpool</RefSchemaName>
       <RefTableName>role</RefTableName>
       <RefColNames>RoleID</RefColNames>
-    </foreign-key>
-    <column id="327" parent="256" name="unit_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="328" parent="256" name="user_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="329" parent="256" name="fk_unit_has_user_unit1_idx">
-      <ColNames>unit_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="330" parent="256" name="fk_unit_has_user_user1_idx">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="331" parent="256" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>unit_id
-user_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="332" parent="256" name="fk_unit_has_user_unit1">
-      <ColNames>unit_id</ColNames>
-      <RefSchemaName>reportpool</RefSchemaName>
-      <RefTableName>unit</RefTableName>
-      <RefColNames>UnitID</RefColNames>
-    </foreign-key>
-    <foreign-key id="333" parent="256" name="fk_unit_has_user_user1">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>reportpool</RefSchemaName>
-      <RefTableName>user</RefTableName>
-      <RefColNames>UserID</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
