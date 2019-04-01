@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/324510a4-f12b-4d75-a4ce-f67053400a5a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5d9a9eb9-6cbc-491e-b28e-d328cecfe9e2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5d9a9eb9-6cbc-491e-b28e-d328cecfe9e2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reportpool-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reportpool-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UnitReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UnitReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UnitReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UnitReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/applicationtest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/applicationtest.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/controller/UnitReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/controller/UnitReportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UnitReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UnitReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/applicationtest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/applicationtest.properties" afterDir="false" />
-    </list>
+    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="a bit changes" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,29 +33,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UnitReportService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="52" column="58" lean-forward="true" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UnitReportController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,6 +117,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,15 +150,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="reportpool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reportpool-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reportpool-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="reportpool" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reportpool-api" type="b2602c69:ProjectViewProjectNode" />
@@ -412,7 +367,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,7 +380,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554139078812" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554141164053" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -810,12 +764,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90805000" />
+    <option name="totallyTimeSpent" value="90817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63805103" visible="true" weight="0.28139183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.63805103" visible="true" weight="0.28139183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
