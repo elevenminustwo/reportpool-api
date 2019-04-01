@@ -7,19 +7,19 @@ import javax.persistence.IdClass;
 import java.util.Objects;
 
 @Entity
-@IdClass(UserunitPK.class)
-public class Userunit {
-    private int unitId;
+@IdClass(UserdepartmentunitPK.class)
+public class Userdepartmentunit {
+    private int departmentunitId;
     private int userId;
 
     @Id
-    @Column(name = "unit_id", nullable = false)
-    public int getUnitId() {
-        return unitId;
+    @Column(name = "departmentunit_id", nullable = false)
+    public int getDepartmentunitId() {
+        return departmentunitId;
     }
 
-    public void setUnitId(int unitId) {
-        this.unitId = unitId;
+    public void setDepartmentunitId(int departmentunitId) {
+        this.departmentunitId = departmentunitId;
     }
 
     @Id
@@ -36,14 +36,14 @@ public class Userunit {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Userunit userunit = (Userunit) o;
-        return unitId == userunit.unitId &&
-                userId == userunit.userId;
+        Userdepartmentunit that = (Userdepartmentunit) o;
+        return departmentunitId == that.departmentunitId &&
+                userId == that.userId;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(unitId, userId);
+        return Objects.hash(departmentunitId, userId);
     }
 }

@@ -193,20 +193,20 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `reportpool`.`userunit`
+-- Table `reportpool`.`userdepartmentunit`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `reportpool`.`userunit` (
-  `unit_id` INT(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `reportpool`.`userdepartmentunit` (
+  `departmentunit_id` INT(11) NOT NULL,
   `user_id` INT(11) NOT NULL,
-  PRIMARY KEY (`unit_id`, `user_id`),
-  INDEX `fk_unit_has_user_user1_idx` (`user_id` ASC),
-  INDEX `fk_unit_has_user_unit1_idx` (`unit_id` ASC),
-  CONSTRAINT `fk_unit_has_user_unit1`
-    FOREIGN KEY (`unit_id`)
-    REFERENCES `reportpool`.`unit` (`UnitID`)
+  PRIMARY KEY (`departmentunit_id`, `user_id`),
+  INDEX `fk_departmentunit_has_user_user1_idx` (`user_id` ASC),
+  INDEX `fk_departmentunit_has_user_departmentunit1_idx` (`departmentunit_id` ASC),
+  CONSTRAINT `fk_departmentunit_has_user_departmentunit1`
+    FOREIGN KEY (`departmentunit_id`)
+    REFERENCES `reportpool`.`departmentunit` (`DepartmentUnitID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_unit_has_user_user1`
+  CONSTRAINT `fk_departmentunit_has_user_user1`
     FOREIGN KEY (`user_id`)
     REFERENCES `reportpool`.`user` (`UserID`)
     ON DELETE NO ACTION
