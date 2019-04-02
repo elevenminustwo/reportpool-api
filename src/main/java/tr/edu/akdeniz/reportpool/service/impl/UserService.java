@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import tr.edu.akdeniz.reportpool.entity.Department;
 import tr.edu.akdeniz.reportpool.entity.Departmentunit;
 import tr.edu.akdeniz.reportpool.entity.Userdepartmentunit;
 import tr.edu.akdeniz.reportpool.entity.Userroles;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
-import tr.edu.akdeniz.reportpool.model.UserUnitDto;
+import tr.edu.akdeniz.reportpool.model.UserUnitEditDto;
 import tr.edu.akdeniz.reportpool.model.UserrolesDto;
 import tr.edu.akdeniz.reportpool.repository.DepartmentUnitRepository;
 import tr.edu.akdeniz.reportpool.repository.UserDUnitRepository;
@@ -147,30 +146,30 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    public ResponseEntity addDunit(UserUnitDto userUnitDto){
-        Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitDto.departmentId,Integer.parseInt(userUnitDto.getUnitId()));
+    public ResponseEntity addDunit(UserUnitEditDto userUnitEditDto){
+        Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitEditDto.departmentId,Integer.parseInt(userUnitEditDto.getUnitId()));
         if(departmentu==null){
             Departmentunit departmentunit = new Departmentunit();
-            departmentunit.setDepartmentId(userUnitDto.getDepartmentId());
-            departmentunit.setUnitId(Integer.parseInt(userUnitDto.getUnitId()));
+            departmentunit.setDepartmentId(userUnitEditDto.getDepartmentId());
+            departmentunit.setUnitId(Integer.parseInt(userUnitEditDto.getUnitId()));
             departmentUnitRepository.save(departmentunit);
             Userdepartmentunit userdepartmentunit = new Userdepartmentunit();
             userdepartmentunit.setDepartmentunitId(departmentunit.getDepartmentUnitId());
-            userdepartmentunit.setUserId(userUnitDto.getUserId());
+            userdepartmentunit.setUserId(userUnitEditDto.getUserId());
             userDUnitRepository.save(userdepartmentunit);
             return new ResponseEntity(HttpStatus.OK);
         }
         Userdepartmentunit udu = new Userdepartmentunit();
         udu.setDepartmentunitId(departmentu.getDepartmentUnitId());
-        udu.setUserId(userUnitDto.getUserId());
+        udu.setUserId(userUnitEditDto.getUserId());
         userDUnitRepository.save(udu);
         return new ResponseEntity(HttpStatus.OK);
 
     }
-    public ResponseEntity delDunit(UserUnitDto userUnitDto){
-        Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitDto.departmentId,Integer.parseInt(userUnitDto.getUnitId()));
+    public ResponseEntity delDunit(UserUnitEditDto userUnitEditDto){
+        Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitEditDto.departmentId,Integer.parseInt(userUnitEditDto.getUnitId()));
         if(departmentu!=null){
-            Userdepartmentunit userdepartmentunit = userDUnitRepository.findFirstByDepartmentunitIdAndUserId(departmentu.getDepartmentUnitId(),userUnitDto.getUserId());
+            Userdepartmentunit userdepartmentunit = userDUnitRepository.findFirstByDepartmentunitIdAndUserId(departmentu.getDepartmentUnitId(), userUnitEditDto.getUserId());
             if(userdepartmentunit!=null){
                 userDUnitRepository.delete(userdepartmentunit);
             }

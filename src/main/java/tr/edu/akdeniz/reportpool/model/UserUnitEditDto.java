@@ -1,15 +1,15 @@
 package tr.edu.akdeniz.reportpool.model;
 
-public class UserUnitDto {
+public class UserUnitEditDto {
 
     public int departmentId;
     public int userId;
     public String unitId;
 
-    public UserUnitDto() {
+    public UserUnitEditDto() {
     }
 
-    public UserUnitDto(int departmentId, int userId, String unitId) {
+    public UserUnitEditDto(int departmentId, int userId, String unitId) {
         this.departmentId = departmentId;
         this.userId = userId;
         this.unitId = unitId;

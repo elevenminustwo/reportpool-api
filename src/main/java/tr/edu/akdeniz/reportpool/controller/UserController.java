@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.UserDto;
-import tr.edu.akdeniz.reportpool.model.UserUnitDto;
+import tr.edu.akdeniz.reportpool.model.UserUnitEditDto;
 import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import java.util.List;
@@ -29,15 +29,15 @@ public class UserController {
 
     @RequestMapping("/api/addDunit")
     @CrossOrigin
-    public ResponseEntity addDunit(@RequestBody UserUnitDto userUnitDto) {
+    public ResponseEntity addDunit(@RequestBody UserUnitEditDto userUnitEditDto) {
 
-        return userService.addDunit(userUnitDto);
+        return userService.addDunit(userUnitEditDto);
     }
     @RequestMapping("/api/delDunit")
     @CrossOrigin
-    public ResponseEntity delDunit(@RequestBody UserUnitDto userUnitDto) {
+    public ResponseEntity delDunit(@RequestBody UserUnitEditDto userUnitEditDto) {
 
-        return userService.delDunit(userUnitDto);
+        return userService.delDunit(userUnitEditDto);
     }
 
 

@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UnitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/DepartmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UnitDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/model/UserUnitDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/DepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/DepartmentUnitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UnitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/repository/UserDUnitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/GenericDepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UnitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tr/edu/akdeniz/reportpool/service/impl/UserService.class" afterDir="false" />
-    </list>
+    <list default="true" id="40dd9a98-6cef-4fc6-b7ac-83e5c96a15cb" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +67,7 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="289">
               <caret line="172" column="166" selection-start-line="172" selection-start-column="166" selection-end-line="172" selection-end-column="166" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -712,7 +694,7 @@
       <workItem from="1553957485779" duration="843000" />
       <workItem from="1554213429306" duration="5154000" />
       <workItem from="1554220897615" duration="2028000" />
-      <workItem from="1554222935940" duration="1306000" />
+      <workItem from="1554222935940" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="api start up done">
       <created>1551207709789</created>
@@ -910,7 +892,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553958332262</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="unit add delete done">
+      <created>1554224395213</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1554224395215</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -946,11 +935,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82241000" />
+    <option name="totallyTimeSpent" value="82621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014641" side_tool="true" weight="0.39933994" />
@@ -962,7 +950,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" order="4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" visible="true" weight="0.39933994" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" weight="0.39933994" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.2359736" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -970,11 +958,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32673267" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info id="Persistence" order="8" sideWeight="0.36138615" side_tool="true" weight="0.2693997" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6386139" visible="true" weight="0.2693997" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6386139" visible="true" weight="0.2693997" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1032,7 +1020,8 @@
     <MESSAGE value="done" />
     <MESSAGE value="a bit changes" />
     <MESSAGE value="table changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="table changes" />
+    <MESSAGE value="unit add delete done" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit add delete done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1420,7 +1409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/akdeniz/reportpool/service/impl/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="289">
           <caret line="172" column="166" selection-start-line="172" selection-start-column="166" selection-end-line="172" selection-end-column="166" />
           <folding>
             <element signature="imports" expanded="true" />
