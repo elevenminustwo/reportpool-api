@@ -1,11 +1,10 @@
 package tr.edu.akdeniz.reportpool.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.UserDto;
+import tr.edu.akdeniz.reportpool.model.UserUnitDto;
 import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import java.util.List;
@@ -28,6 +27,18 @@ public class UserController {
         return userService.getUser();
     }
 
+    @RequestMapping("/api/addDunit")
+    @CrossOrigin
+    public ResponseEntity addDunit(@RequestBody UserUnitDto userUnitDto) {
+
+        return userService.addDunit(userUnitDto);
+    }
+    @RequestMapping("/api/delDunit")
+    @CrossOrigin
+    public ResponseEntity delDunit(@RequestBody UserUnitDto userUnitDto) {
+
+        return userService.delDunit(userUnitDto);
+    }
 
 
 
