@@ -5,12 +5,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import tr.edu.akdeniz.reportpool.entity.Departmentunit;
+import tr.edu.akdeniz.reportpool.entity.User;
 import tr.edu.akdeniz.reportpool.entity.Userdepartmentunit;
 import tr.edu.akdeniz.reportpool.entity.Userroles;
-import tr.edu.akdeniz.reportpool.model.PaginationDto;
-import tr.edu.akdeniz.reportpool.model.UserDto;
-import tr.edu.akdeniz.reportpool.model.UserUnitEditDto;
-import tr.edu.akdeniz.reportpool.model.UserrolesDto;
+import tr.edu.akdeniz.reportpool.model.*;
 import tr.edu.akdeniz.reportpool.repository.DepartmentUnitRepository;
 import tr.edu.akdeniz.reportpool.repository.UserDUnitRepository;
 import tr.edu.akdeniz.reportpool.repository.UserRepository;
@@ -174,6 +172,24 @@ public class UserService implements GenericUserService {
                 userDUnitRepository.delete(userdepartmentunit);
             }
         }
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    public ResponseEntity login(String username,String psw){
+        if(userRepository.existsUserByUsernameAndPassword(username,psw)){
+            return new ResponseEntity(HttpStatus.OK);
+        }
+        return new ResponseEntity(HttpStatus.NOT_FOUND);
+    }
+    public ResponseEntity register(String email,String username,String psw,String name,String surname){
+        User user = new User();
+            user.setEmail(email);
+            user.setUsername(username);
+            user.setPassword(psw);
+            user.setName(name);
+            user.setSurname(surname);
+            user.setIsActive((byte)1);
+            userRepository.save(user);
         return new ResponseEntity(HttpStatus.OK);
     }
 
