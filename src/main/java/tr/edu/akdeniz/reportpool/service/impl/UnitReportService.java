@@ -63,9 +63,12 @@ public class UnitReportService {
                 .setFirstResult(Integer.parseInt(skip));
                 int recordsTotal=((Number)entityManager
                         .createNativeQuery("SELECT COUNT(*) " +
-                                "FROM department d , departmentunit du , unit u , user us , report r , attachment att" +
-                                " WHERE d.DepartmentID = du.department_id AND du.unit_id = u.UnitID AND us.UserID = r.user_id " +
-                                "AND r.ReportID = att.report_id AND d.DepartmentID= ?7 ")
+                                "FROM department d,departmentunit du,unit u,user us,report r,attachment att,userdepartmentunit udu" +
+                                " WHERE d.DepartmentID = du.department_id AND du.DepartmentUnitID= udu.departmentunit_id" +
+                                " AND us.UserID = r.user_id " +
+                                " AND r.user_id=us.UserID  " +
+                                "AND r.ReportID=att.report_id" +
+                                " AND us.Name LIKE ?7 ")
                         .setParameter(7,"%"+search+"%")
                         .getSingleResult()).intValue();
         PaginationDto paginationDto = new PaginationDto(Integer.parseInt(draw),recordsTotal-Integer.parseInt(skip),recordsTotal,q.getResultList());
