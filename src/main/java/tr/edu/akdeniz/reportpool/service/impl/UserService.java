@@ -193,4 +193,9 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    public int getUserIdOfUser(String username) {
+        User user = userRepository.findByUsername(username);
+        return user.getUserId();
+    }
+
 }

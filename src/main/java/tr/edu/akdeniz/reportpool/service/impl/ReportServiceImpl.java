@@ -22,5 +22,9 @@ public class ReportServiceImpl implements ReportService {
         return reportRepository.save(report);
     }
 
+    public Report getIncompleteReportOf(int userId) {
+        return reportRepository.findTopByUserIdAndIsCompletedOrderByReportIdDesc(userId, (byte) 0);
+    }
+
 
 }

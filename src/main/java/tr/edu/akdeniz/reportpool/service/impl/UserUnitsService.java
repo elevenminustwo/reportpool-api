@@ -18,7 +18,7 @@ public class UserUnitsService {
     public List<UserUnitDto> getUserUnits(int i) {
         Query userunit = entityManager.createNativeQuery(
                 "SELECT du.DepartmentUnitID AS departmentUnitId, d.Name AS departmentName, u.Name AS unitName FROM Unit u, Department d, Departmentunit du, Userdepartmentunit udu" +
-                        " WHERE du.unit_id = u.UnitID AND udu.departmentunit_id = du.DepartmentUnitID AND udu.user_id= ?1");
+                        " WHERE du.department_id = d.DepartmentID AND du.unit_id = u.UnitID AND udu.departmentunit_id = du.DepartmentUnitID AND udu.user_id= ?1");
         userunit.setParameter(1,i);
 
         return  userunit.getResultList();

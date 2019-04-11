@@ -9,7 +9,7 @@ import java.util.Objects;
 @Entity
 public class Attachment {
     private int attachmentId;
-    private String path;
+    private String file;
     private int attachmenttypeId;
     private int reportId;
 
@@ -24,13 +24,13 @@ public class Attachment {
     }
 
     @Basic
-    @Column(name = "Path", nullable = true, length = 255)
-    public String getPath() {
-        return path;
+    @Column(name = "file", nullable = true, length = 255)
+    public String getFile() {
+        return file;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setFile(String file) {
+        this.file = file;
     }
 
     @Basic
@@ -61,12 +61,12 @@ public class Attachment {
         return attachmentId == that.attachmentId &&
                 attachmenttypeId == that.attachmenttypeId &&
                 reportId == that.reportId &&
-                Objects.equals(path, that.path);
+                Objects.equals(file, that.file);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(attachmentId, path, attachmenttypeId, reportId);
+        return Objects.hash(attachmentId, file, attachmenttypeId, reportId);
     }
 }

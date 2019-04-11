@@ -44,6 +44,11 @@ public class ReportController {
         return reportService.save(report);
     }
 
+    @GetMapping(value = "/api/getIncompleteReportOf/{userId}")
+    @CrossOrigin
+    public Report getInCompleteReportOf(@PathVariable int userId) {
+        return reportService.getIncompleteReportOf(userId);
+    }
 
 
 }

@@ -10,4 +10,6 @@ public interface ReportService {
 
     Report save(Report report);
 
+    Report getIncompleteReportOf(int userId);
+
 }
