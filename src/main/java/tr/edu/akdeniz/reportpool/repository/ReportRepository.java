@@ -6,7 +6,7 @@ import tr.edu.akdeniz.reportpool.entity.Report;
 public interface ReportRepository extends JpaRepository<Report, Integer> {
 
     Report findTopByUserIdAndIsCompletedOrderByReportIdDesc(int userId, byte isCompleted);
-
+    void deleteAllByUserIdAndIsCompleted(int userId, byte isCompleted);
 
 
 }

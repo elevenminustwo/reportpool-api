@@ -1,7 +1,9 @@
 package tr.edu.akdeniz.reportpool.controller;
 
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import tr.edu.akdeniz.reportpool.entity.Report;
 import tr.edu.akdeniz.reportpool.service.ReportService;
 
@@ -32,16 +34,18 @@ public class ReportController {
 
     // request body ornegi:  {"reportId":null,"title":"Rapor basligi","text":"Rapor icerigi","isCompleted":1,"dateCompleted":"2006-12-24","userId":1,"departmentunitId":1}
 
-    @RequestMapping(value = "/savereport", method = RequestMethod.POST)
+    @PostMapping(value = "/savereport")
     @CrossOrigin
-    public Report saveReport(@RequestBody Report report) {
-        return reportService.save(report);
+    public Report saveReport(@RequestHeader("report") String reportJson, @RequestParam("files") MultipartFile[] files) {
+        Gson gson = new Gson();
+        Report report = gson.fromJson(reportJson, Report.class);
+        return reportService.save(report, files);
     }
 
     @RequestMapping(value = "/tdd/savereport", method = RequestMethod.POST)
     @CrossOrigin
-    public Report saveReportTest(@RequestBody Report report) {
-        return reportService.save(report);
+    public Report saveReportTest(@RequestBody Report report, @RequestParam("files") MultipartFile[] files) {
+        return reportService.save(report, files);
     }
 
     @GetMapping(value = "/api/getIncompleteReportOf/{userId}")

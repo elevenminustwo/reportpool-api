@@ -6,9 +6,11 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+import tr.edu.akdeniz.reportpool.entity.Attachment;
 import tr.edu.akdeniz.reportpool.file_upload.FileStorageException;
 import tr.edu.akdeniz.reportpool.file_upload.FileStorageProperties;
 import tr.edu.akdeniz.reportpool.file_upload.MyFileNotFoundException;
+import tr.edu.akdeniz.reportpool.repository.AttachmentRepository;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,6 +25,9 @@ public class FileStorageService {
     private final Path fileStorageLocation;
 
     @Autowired
+    private AttachmentRepository attachmentRepository;
+
+    @Autowired
     public FileStorageService(FileStorageProperties fileStorageProperties) {
         this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir())
                 .toAbsolutePath().normalize();
@@ -34,9 +39,10 @@ public class FileStorageService {
         }
     }
 
-    public String storeFile(MultipartFile file) {
+    public String storeFile(MultipartFile file, int reportId) {
         // Normalize file name
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+
 
         try {
             // Check if the file's name contains invalid characters
@@ -44,12 +50,17 @@ public class FileStorageService {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
 
+            /*
             // Copy file to the target location (Replacing existing file with the same name)
             Path targetLocation = this.fileStorageLocation.resolve(fileName);
             Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
+            */
+            Attachment attachment = new Attachment(fileName, file.getBytes(), 1, reportId);
+            attachmentRepository.save(attachment);
+
 
             return fileName;
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
         }
     }
