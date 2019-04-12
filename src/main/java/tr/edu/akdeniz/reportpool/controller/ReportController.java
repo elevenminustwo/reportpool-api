@@ -36,15 +36,9 @@ public class ReportController {
 
     @PostMapping(value = "/savereport")
     @CrossOrigin
-    public Report saveReport(@RequestHeader("report") String reportJson, @RequestParam("files") MultipartFile[] files) {
+    public Report saveReport(@RequestParam("report") String reportJson, @RequestParam("files") MultipartFile[] files) {
         Gson gson = new Gson();
         Report report = gson.fromJson(reportJson, Report.class);
-        return reportService.save(report, files);
-    }
-
-    @RequestMapping(value = "/tdd/savereport", method = RequestMethod.POST)
-    @CrossOrigin
-    public Report saveReportTest(@RequestBody Report report, @RequestParam("files") MultipartFile[] files) {
         return reportService.save(report, files);
     }
 
