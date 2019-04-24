@@ -9,6 +9,7 @@ import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import java.util.List;
 
+import static org.springframework.http.ResponseEntity.ok;
 
 
 @RestController
@@ -40,8 +41,11 @@ public class UserController {
         return userService.delDunit(userUnitEditDto);
     }
 
-
-
+    @RequestMapping("/api/getUserIdOf/{username}")
+    @CrossOrigin
+    public ResponseEntity<Integer> getUserIdOf(@PathVariable String username) {
+        return ok(userService.getUserIdOfUser(username));
+    }
 
 
 }

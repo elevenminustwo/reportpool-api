@@ -1,9 +1,6 @@
 package tr.edu.akdeniz.reportpool.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
@@ -13,11 +10,12 @@ public class Report {
     private String title;
     private String text;
     private Byte isCompleted;
-    private Date dateCompleted;
+    private String dateCompleted;
     private int userId;
     private int departmentunitId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ReportID", nullable = false)
     public int getReportId() {
         return reportId;
@@ -59,11 +57,11 @@ public class Report {
 
     @Basic
     @Column(name = "DateCompleted", nullable = true)
-    public Date getDateCompleted() {
+    public String getDateCompleted() {
         return dateCompleted;
     }
 
-    public void setDateCompleted(Date dateCompleted) {
+    public void setDateCompleted(String dateCompleted) {
         this.dateCompleted = dateCompleted;
     }
 

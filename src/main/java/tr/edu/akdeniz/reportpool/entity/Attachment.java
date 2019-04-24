@@ -1,19 +1,25 @@
 package tr.edu.akdeniz.reportpool.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Attachment {
     private int attachmentId;
-    private String path;
+    private String fileName;
+    private byte[] file;
     private int attachmenttypeId;
     private int reportId;
 
+    public Attachment(String fileName, byte[] file, int attachmenttypeId, int reportId) {
+        this.fileName = fileName;
+        this.file = file;
+        this.attachmenttypeId = attachmenttypeId;
+        this.reportId = reportId;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "AttachmentID", nullable = false)
     public int getAttachmentId() {
         return attachmentId;
@@ -24,14 +30,26 @@ public class Attachment {
     }
 
     @Basic
-    @Column(name = "Path", nullable = true, length = 255)
-    public String getPath() {
-        return path;
+    @Column(name = "file_name", nullable = true, length = 255)
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
+
+    @Basic
+    @Column(name = "file", nullable = true)
+    public byte[] getFile() {
+        return file;
+    }
+
+    public void setFile(byte[] file) {
+        this.file = file;
+    }
+
+
 
     @Basic
     @Column(name = "attachmenttype_id", nullable = false)
@@ -61,12 +79,12 @@ public class Attachment {
         return attachmentId == that.attachmentId &&
                 attachmenttypeId == that.attachmenttypeId &&
                 reportId == that.reportId &&
-                Objects.equals(path, that.path);
+                Objects.equals(file, that.file);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(attachmentId, path, attachmenttypeId, reportId);
+        return Objects.hash(attachmentId, file, attachmenttypeId, reportId);
     }
 }
