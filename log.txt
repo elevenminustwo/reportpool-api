@@ -1,0 +1,6 @@
+05-05-2019 14:58:44 Admin rolune sahip kullanici girisi
+05-05-2019 15:01:33 Admin rolune sahip kullanici girisi
+05-05-2019 15:01:44 Manager rolune sahip kullanici girisi
+05-05-2019 15:12:25 Manager rolune sahip kullanici girisi yapildi
+05-05-2019 15:13:15 yeni kullanici kaydi yapildi
+05-05-2019 15:13:25 Manager rolune sahip kullanici girisi yapildi

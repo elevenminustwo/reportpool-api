@@ -9,6 +9,11 @@ import tr.edu.akdeniz.reportpool.entity.User;
 import tr.edu.akdeniz.reportpool.repository.TokenRepository;
 import tr.edu.akdeniz.reportpool.repository.UserRepository;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Service
 public class ChangeRequestService {
 
@@ -116,6 +121,7 @@ public class ChangeRequestService {
         Token token = tokenRepository.findByToken(resetToken);
         User user = null;
 
+
         if (token != null) {
 
             // check date
@@ -135,6 +141,16 @@ public class ChangeRequestService {
 
             // delete token after all is done
             tokenRepository.deleteAllByUserId(user.getUserId());
+
+            try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+                Date date = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                PrintWriter out = new PrintWriter(fileWriter);
+                out.println(formatter.format(date) + " " + user.getUserId() + " idli kullanici sifre degistirdi.");
+            }
+            catch (Exception e){
+                System.out.println("not found file");
+            }
 
             return true;
 
