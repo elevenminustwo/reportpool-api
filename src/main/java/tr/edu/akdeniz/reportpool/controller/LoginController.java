@@ -28,3 +28,4 @@ public class LoginController {
         return userService.register(email,username,psw,name,surname);
     }
 }
+
