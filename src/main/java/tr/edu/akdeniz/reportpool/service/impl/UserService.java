@@ -9,10 +9,7 @@ import tr.edu.akdeniz.reportpool.entity.User;
 import tr.edu.akdeniz.reportpool.entity.Userdepartmentunit;
 import tr.edu.akdeniz.reportpool.entity.Userroles;
 import tr.edu.akdeniz.reportpool.model.*;
-import tr.edu.akdeniz.reportpool.repository.DepartmentUnitRepository;
-import tr.edu.akdeniz.reportpool.repository.UserDUnitRepository;
-import tr.edu.akdeniz.reportpool.repository.UserRepository;
-import tr.edu.akdeniz.reportpool.repository.UserroleRepository;
+import tr.edu.akdeniz.reportpool.repository.*;
 import tr.edu.akdeniz.reportpool.service.GenericUserService;
 
 import javax.persistence.*;
@@ -37,6 +34,12 @@ public class UserService implements GenericUserService {
 
     @Autowired
     UserDUnitRepository userDUnitRepository;
+
+    @Autowired
+    DepartmentRepository departmentRepository;
+
+    @Autowired
+    UnitRepository unitRepository;
 
     @Autowired
     EntityManager entityManager;
@@ -150,7 +153,7 @@ public class UserService implements GenericUserService {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) + " " + userrolesDto.getUserId() + " idli kullaniciya " + userrolesDto.getRoleId() + " idli rol eklendi.");
+            out.println(formatter.format(date) + " " + userRepository.findByUserId(userrolesDto.getUserId()).getUsername() + " isimli kullaniciya " + userrolesDto.getRoleId() + " idli rol eklendi.");
         }
         catch (Exception e){
             System.out.println("not found file");
@@ -173,7 +176,7 @@ public class UserService implements GenericUserService {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) + " " + userrolesDto.getUserId() + " idli kullanicinin " + userrolesDto.getRoleId() + " idli rolu silindi.");
+            out.println(formatter.format(date) + " " + userRepository.findByUserId(userrolesDto.getUserId()).getUsername() + " isimli kullanicinin " + userrolesDto.getRoleId() + " idli rolu silindi.");
         }
         catch (Exception e){
             System.out.println("not found file");
@@ -202,7 +205,7 @@ public class UserService implements GenericUserService {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) + " " + userUnitEditDto.departmentId + " idli departmana yeni birim eklendi.");
+            out.println(formatter.format(date) + " " +userRepository.findByUserId(userUnitEditDto.userId).getUsername()+" adli kisi " + departmentRepository.findByDepartmentId(userUnitEditDto.departmentId).getName() + " departmaninda " + unitRepository.findByUnitId(Integer.parseInt(userUnitEditDto.unitId)).getName() +" birimine atandi.");
         }
         catch (Exception e){
             System.out.println("not found file");
@@ -222,7 +225,7 @@ public class UserService implements GenericUserService {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) + " " + userUnitEditDto.userId + " idli kullanici " + userUnitEditDto.unitId + " idli birimi silme islemi gerceklesti");
+            out.println(formatter.format(date) + " " + userRepository.findByUserId(userUnitEditDto.userId).getUsername() + " isimli kullanicidan " + unitRepository.findByUnitId(Integer.parseInt(userUnitEditDto.unitId)).getName() + " isimli birim silindi");
         }
         catch (Exception e){
             System.out.println("not found file");
@@ -264,7 +267,15 @@ public class UserService implements GenericUserService {
             return new ResponseEntity(role,HttpStatus.OK);
         }
         // *********************************
-
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " [HATA] Hatali kullanici giris denemesi");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
+        }
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
     public ResponseEntity register(String email,String username,String psw,String name,String surname){

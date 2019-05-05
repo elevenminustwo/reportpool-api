@@ -6,5 +6,5 @@ import tr.edu.akdeniz.reportpool.entity.Unit;
 import java.util.List;
 
 public interface UnitRepository extends JpaRepository<Unit,Integer> {
-
+    Unit findByUnitId(int id);
 }
