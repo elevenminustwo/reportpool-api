@@ -16,6 +16,10 @@ import tr.edu.akdeniz.reportpool.repository.UserroleRepository;
 import tr.edu.akdeniz.reportpool.service.GenericUserService;
 
 import javax.persistence.*;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -142,7 +146,15 @@ public class UserService implements GenericUserService {
             userRepository.save(user);
         }
         // *************************
-
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " " + userrolesDto.getUserId() + " idli kullaniciya " + userrolesDto.getRoleId() + " idli rol eklendi.");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
     public ResponseEntity delRole(UserrolesDto userrolesDto){
@@ -157,7 +169,15 @@ public class UserService implements GenericUserService {
             userRepository.save(user);
         }
         // *************************
-
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " " + userrolesDto.getUserId() + " idli kullanicinin " + userrolesDto.getRoleId() + " idli rolu silindi.");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
 
@@ -178,6 +198,15 @@ public class UserService implements GenericUserService {
         udu.setDepartmentunitId(departmentu.getDepartmentUnitId());
         udu.setUserId(userUnitEditDto.getUserId());
         userDUnitRepository.save(udu);
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " " + userUnitEditDto.departmentId + " idli departmana yeni birim eklendi.");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
+        }
         return new ResponseEntity(HttpStatus.OK);
 
     }
@@ -188,6 +217,15 @@ public class UserService implements GenericUserService {
             if(userdepartmentunit!=null){
                 userDUnitRepository.delete(userdepartmentunit);
             }
+        }
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " " + userUnitEditDto.userId + " idli kullanici " + userUnitEditDto.unitId + " idli birimi silme islemi gerceklesti");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
         }
         return new ResponseEntity(HttpStatus.OK);
     }
@@ -214,6 +252,15 @@ public class UserService implements GenericUserService {
                     role="User";
                     break;
             }
+            try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+                Date date = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                PrintWriter out = new PrintWriter(fileWriter);
+                out.println(formatter.format(date) + " " + role + " rolune sahip kullanici girisi yapildi");
+            }
+            catch (Exception e){
+                System.out.println("not found file");
+            }
             return new ResponseEntity(role,HttpStatus.OK);
         }
         // *********************************
@@ -230,6 +277,16 @@ public class UserService implements GenericUserService {
             //user.setIsActive((byte)1); commented out by Mert
             user.setIsActive((byte)0); // Mert added this (artik register oldugunda inaktif)
             userRepository.save(user);
+
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) +" Yeni kullanici kaydi yapildi");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
+        }
         return new ResponseEntity(HttpStatus.OK);
     }
 
