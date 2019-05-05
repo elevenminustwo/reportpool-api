@@ -36,6 +36,21 @@ public class UnitReportService {
                 break;
 
         }
+
+
+        String[] words = search.split(" ");
+        StringBuilder sb = new StringBuilder("");
+        for (int i = 0; i < words.length - 1; i++) {
+            sb.append(words[i] + "%");
+        }
+        if (words.length > 0) {
+            sb.append(words[words.length - 1]);
+            search = sb.toString();
+        }
+
+
+
+
         Query q=entityManager
                 .createNativeQuery(
                         "SELECT us.Name  AS ?0," +
@@ -48,8 +63,8 @@ public class UnitReportService {
                                 "AND du.DepartmentUnitID= udu.departmentunit_id" +
                                 " AND du.DepartmentUnitID=r.departmentunit_id " +
                                 "AND r.user_id=us.UserID " +
-                                //" AND (us.Name LIKE ?4 OR r.Text LIKE ?4 OR us.Surname LIKE ?4 OR r.DateCompleted LIKE ?4)"+
-                                " AND MATCH(r.Text) AGAINST (?4 IN BOOLEAN MODE)" +
+                                " AND (r.Text LIKE ?4)"+
+                                //" AND MATCH(r.Text) AGAINST (?4 IN BOOLEAN MODE)" +
                                 " AND d.DepartmentID="+dept+
                                 "  AND u.UnitID= "+unit+
                                 "  ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
@@ -71,8 +86,8 @@ public class UnitReportService {
                         "AND r.user_id=us.UserID " +
                         " AND d.DepartmentID="+dept+
                         "  AND u.UnitID= "+unit+
-                        " AND MATCH(r.Text) AGAINST (?7 IN BOOLEAN MODE)")
-                        //" AND (us.Name LIKE ?7 OR r.Text LIKE ?7 OR us.Surname LIKE ?7 OR r.DateCompleted LIKE ?7)")
+                        //" AND MATCH(r.Text) AGAINST (?7 IN BOOLEAN MODE)")
+                        " AND (r.Text LIKE ?7)")
                 .setParameter(7,"%"+search+"%")
                 .getSingleResult()).intValue();
         PaginationDto paginationDto = new PaginationDto(Integer.parseInt(draw),recordsTotal-Integer.parseInt(skip),recordsTotal,q.getResultList());
