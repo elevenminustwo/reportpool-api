@@ -214,7 +214,8 @@ public class UserService implements GenericUserService {
             user.setPassword(psw);
             user.setName(name);
             user.setSurname(surname);
-            user.setIsActive((byte)1);
+            //user.setIsActive((byte)1); commented out by Mert
+            user.setIsActive((byte)0); // Mert added this (artik register oldugunda inaktif)
             userRepository.save(user);
         return new ResponseEntity(HttpStatus.OK);
     }
