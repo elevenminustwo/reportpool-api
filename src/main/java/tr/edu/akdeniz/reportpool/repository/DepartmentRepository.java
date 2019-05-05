@@ -9,4 +9,6 @@ public interface DepartmentRepository extends JpaRepository<Department,Integer> 
     @Override
     List<Department> findAll();
 
+    Department findByDepartmentId(int id);
+
 }

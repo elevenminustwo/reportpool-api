@@ -146,7 +146,7 @@ public class ChangeRequestService {
                 Date date = new Date();
                 SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
                 PrintWriter out = new PrintWriter(fileWriter);
-                out.println(formatter.format(date) + " " + user.getUserId() + " idli kullanici sifre degistirdi.");
+                out.println(formatter.format(date) + " " + userRepository.findByUserId(user.getUserId()).getUsername() + " isimli kullanici sifre degistirdi.");
             }
             catch (Exception e){
                 System.out.println("not found file");
@@ -154,6 +154,15 @@ public class ChangeRequestService {
 
             return true;
 
+        }
+        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            PrintWriter out = new PrintWriter(fileWriter);
+            out.println(formatter.format(date) + " [HATA] " + userRepository.findByUserId(user.getUserId()).getUsername() + " isimli kullanici sifre degistirme islemi basarisiz oldu.");
+        }
+        catch (Exception e){
+            System.out.println("not found file");
         }
 
         return false;

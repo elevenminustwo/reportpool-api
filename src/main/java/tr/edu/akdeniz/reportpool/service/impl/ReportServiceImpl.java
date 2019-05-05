@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import tr.edu.akdeniz.reportpool.controller.FileController;
 import tr.edu.akdeniz.reportpool.entity.Report;
 import tr.edu.akdeniz.reportpool.repository.ReportRepository;
+import tr.edu.akdeniz.reportpool.repository.UserRepository;
 import tr.edu.akdeniz.reportpool.service.FileStorageService;
 import tr.edu.akdeniz.reportpool.service.ReportService;
 
@@ -24,6 +25,8 @@ public class ReportServiceImpl implements ReportService {
     private ReportRepository reportRepository;
     @Autowired
     private FileController fileController;
+    @Autowired
+    private UserRepository userRepository;
 
     public List<Report> findAll() {
         return reportRepository.findAll();
@@ -40,7 +43,7 @@ public class ReportServiceImpl implements ReportService {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) + " " + userId + " idli kullanici yeni rapor ekledi.");
+            out.println(formatter.format(date) + " " + userRepository.findByUserId(userId).getUsername() + " isimli kullanici yeni rapor ekledi.");
         }
         catch (Exception e){
             System.out.println("not found file");

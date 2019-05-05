@@ -1,6 +1,8 @@
-05-05-2019 14:58:44 Admin rolune sahip kullanici girisi
-05-05-2019 15:01:33 Admin rolune sahip kullanici girisi
-05-05-2019 15:01:44 Manager rolune sahip kullanici girisi
-05-05-2019 15:12:25 Manager rolune sahip kullanici girisi yapildi
-05-05-2019 15:13:15 yeni kullanici kaydi yapildi
-05-05-2019 15:13:25 Manager rolune sahip kullanici girisi yapildi
+
+05-05-2019 15:47:49 [HATA] Hatali kullanici giris denemesi
+05-05-2019 15:47:52 Manager rolune sahip kullanici girisi yapildi
+05-05-2019 15:48:02 Admin rolune sahip kullanici girisi yapildi
+05-05-2019 15:48:05 Huseyin isimli kullanicinin 1 idli rolu silindi.
+05-05-2019 15:48:09 Huseyin isimli kullaniciya 2 idli rol eklendi.
+05-05-2019 15:48:15 Eray adli kisi asdasd departmaninda sda birimine atandi.
+05-05-2019 15:48:16 Eray isimli kullanicidan sda isimli birim silindi
