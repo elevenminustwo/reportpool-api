@@ -201,7 +201,20 @@ public class UserService implements GenericUserService {
 
         // Mert was here *******************
         if(userRepository.existsUserByUsernameAndPasswordAndIsActive(username,psw, (byte)1)){
-            return new ResponseEntity(HttpStatus.OK);
+            int id = userroleRepository.findByUserId(userRepository.findByUsernameAndPassword(username,psw).getUserId()).getRoleId();
+            String role = "";
+            switch (id){
+                case 1:
+                    role="Admin";
+                    break;
+                case 2:
+                    role="Manager";
+                    break;
+                case 3:
+                    role="User";
+                    break;
+            }
+            return new ResponseEntity(role,HttpStatus.OK);
         }
         // *********************************
 
