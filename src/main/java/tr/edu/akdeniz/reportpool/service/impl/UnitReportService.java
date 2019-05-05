@@ -41,12 +41,26 @@ public class UnitReportService {
         String[] words = search.split(" ");
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < words.length - 1; i++) {
+            sb.append("+" + words[i] + "* ");
+        }
+        if (words.length > 0) {
+            sb.append("+" + words[words.length - 1] + "*");
+            search = sb.toString();
+        }
+
+
+        /*
+        String[] words = search.split(" ");
+        StringBuilder sb = new StringBuilder("");
+        for (int i = 0; i < words.length - 1; i++) {
             sb.append(words[i] + "%");
         }
         if (words.length > 0) {
             sb.append(words[words.length - 1]);
             search = sb.toString();
         }
+        */
+
 
 
 
@@ -61,10 +75,11 @@ public class UnitReportService {
                                 " WHERE d.DepartmentID=du.department_id AND " +
                                 "u.UnitID=du.unit_id " +
                                 "AND du.DepartmentUnitID= udu.departmentunit_id" +
+                                " AND us.UserID= udu.user_id" +
                                 " AND du.DepartmentUnitID=r.departmentunit_id " +
                                 "AND r.user_id=us.UserID " +
-                                " AND (r.Text LIKE ?4)"+
-                                //" AND MATCH(r.Text) AGAINST (?4 IN BOOLEAN MODE)" +
+                                //" AND (r.Text LIKE ?4)"+
+                                " AND MATCH(r.Text) AGAINST (?4 IN BOOLEAN MODE)" +
                                 " AND d.DepartmentID="+dept+
                                 "  AND u.UnitID= "+unit+
                                 "  ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
@@ -72,7 +87,7 @@ public class UnitReportService {
                 .setParameter(1,"surName")
                 .setParameter(2,"dateCompleted")
                 .setParameter(3,"text")
-                .setParameter(4,"%"+search+"%")
+                .setParameter(4,"'"+search+"'")
 
                 .setMaxResults(Integer.parseInt(length))
                 .setFirstResult(Integer.parseInt(skip));
@@ -82,17 +97,19 @@ public class UnitReportService {
                         " WHERE d.DepartmentID=du.department_id AND " +
                         "u.UnitID=du.unit_id " +
                         "AND du.DepartmentUnitID= udu.departmentunit_id" +
+                        " AND us.UserID= udu.user_id" +
                         " AND du.DepartmentUnitID=r.departmentunit_id " +
                         "AND r.user_id=us.UserID " +
                         " AND d.DepartmentID="+dept+
                         "  AND u.UnitID= "+unit+
-                        //" AND MATCH(r.Text) AGAINST (?7 IN BOOLEAN MODE)")
-                        " AND (r.Text LIKE ?7)")
-                .setParameter(7,"%"+search+"%")
+                        " AND MATCH(r.Text) AGAINST (?7 IN BOOLEAN MODE)")
+                        //" AND (r.Text LIKE ?7)")
+                .setParameter(7,"'"+search+"'")
                 .getSingleResult()).intValue();
         PaginationDto paginationDto = new PaginationDto(Integer.parseInt(draw),recordsTotal-Integer.parseInt(skip),recordsTotal,q.getResultList());
         return paginationDto;
     }
+
 
 
 

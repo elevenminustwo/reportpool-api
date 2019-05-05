@@ -25,13 +25,9 @@ public class ChangeRequestService {
     EmailSenderService emailSenderService;
 
     private static final long TOKEN_EXPIRE_TIME_MILLIS = 7200000; // 2 hours
-    //test
-    public static final String UI_LOCATION_TEST = "file:///Users/mertbicak/reportpool-ui/reportpool-ui/";
-    // real
-    private static final String UI_LOCATION = "localhost";
 
     @Transactional
-    public boolean sendPasswordChangeRequest(String username) {
+    public String[] sendPasswordChangeRequest(String username) {
 
         User user = userRepository.findByUsername(username);
 
@@ -44,37 +40,21 @@ public class ChangeRequestService {
             Token token = new Token(user.getUserId());
             tokenRepository.save(token);
 
-            SimpleMailMessage mailMessage = new SimpleMailMessage();
-            mailMessage.setTo(user.getEmail());
-            mailMessage.setSubject("Şifre Yenileme");
-            mailMessage.setFrom("reportpooladmin@gmail.com");
-            // during development
-            mailMessage.setText("Şifrenizi yenilemek için buraya tıklayınız : "
-                    + UI_LOCATION_TEST + "/passwordReset.html?token="+token.getToken());
-            /* after deployment
-            mailMessage.setText("To reset your password, please click here : "
-                    +"http://" + UI_LOCATION + ":8080/api/change/changePassword?token="+token.getToken());
-                    */
+            String[] emailToken = new String[2];
+            emailToken[0] = user.getEmail();
+            emailToken[1] = token.getToken();
 
-
-            try {
-                emailSenderService.sendEmail(mailMessage);
-            } catch (Exception e) {
-                e.printStackTrace();
-                return false;
-            }
-
-            return true;
+            return emailToken;
 
         } else {
-            return false;
+            return null;
         }
 
     }
 
 
     @Transactional
-    public boolean sendPasswordChangeRequestByEmail(String email) {
+    public String sendPasswordChangeRequestByEmail(String email) {
 
         User user = userRepository.findByEmail(email);
 
@@ -86,30 +66,10 @@ public class ChangeRequestService {
             Token token = new Token(user.getUserId());
             tokenRepository.save(token);
 
-            SimpleMailMessage mailMessage = new SimpleMailMessage();
-            mailMessage.setTo(user.getEmail());
-            mailMessage.setSubject("Şifre Yenileme");
-            mailMessage.setFrom("reportpooladmin@gmail.com");
-            // during development
-            mailMessage.setText("Şifrenizi yenilemek için buraya tıklayınız : "
-                    + UI_LOCATION_TEST + "/passwordReset.html?token="+token.getToken());
-            /* after deployment
-            mailMessage.setText("To reset your password, please click here : "
-                    +"http://" + UI_LOCATION + ":8080/api/change/changePassword?token="+token.getToken());
-                    */
-
-
-            try {
-                emailSenderService.sendEmail(mailMessage);
-            } catch (Exception e) {
-                e.printStackTrace();
-                return false;
-            }
-
-            return true;
+            return token.getToken();
 
         } else {
-            return false;
+            return "";
         }
 
     }
