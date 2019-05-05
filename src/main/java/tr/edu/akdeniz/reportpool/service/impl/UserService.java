@@ -134,6 +134,15 @@ public class UserService implements GenericUserService {
         userroles.setRoleId(userrolesDto.getRoleId());
         userroles.setUserId(userrolesDto.getUserId());
         userroleRepository.save(userroles);
+
+        // Mert was here ***********
+        User user = userRepository.findByUserId(userrolesDto.getUserId());
+        if (user != null) {
+            user.setIsActive((byte)1);
+            userRepository.save(user);
+        }
+        // *************************
+
         return new ResponseEntity(HttpStatus.OK);
     }
     public ResponseEntity delRole(UserrolesDto userrolesDto){
@@ -141,6 +150,14 @@ public class UserService implements GenericUserService {
         if(userroles!=null){
             userroleRepository.delete(userroles);
         }
+        // Mert was here ***********
+        User user = userRepository.findByUserId(userrolesDto.getUserId());
+        if (user != null) {
+            user.setIsActive((byte)0);
+            userRepository.save(user);
+        }
+        // *************************
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
@@ -176,9 +193,18 @@ public class UserService implements GenericUserService {
     }
 
     public ResponseEntity login(String username,String psw){
+        /* commented out by mert
         if(userRepository.existsUserByUsernameAndPassword(username,psw)){
             return new ResponseEntity(HttpStatus.OK);
         }
+        */
+
+        // Mert was here *******************
+        if(userRepository.existsUserByUsernameAndPasswordAndIsActive(username,psw, (byte)1)){
+            return new ResponseEntity(HttpStatus.OK);
+        }
+        // *********************************
+
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
     public ResponseEntity register(String email,String username,String psw,String name,String surname){
@@ -188,7 +214,8 @@ public class UserService implements GenericUserService {
             user.setPassword(psw);
             user.setName(name);
             user.setSurname(surname);
-            user.setIsActive((byte)1);
+            //user.setIsActive((byte)1); commented out by Mert
+            user.setIsActive((byte)0); // Mert added this (artik register oldugunda inaktif)
             userRepository.save(user);
         return new ResponseEntity(HttpStatus.OK);
     }
