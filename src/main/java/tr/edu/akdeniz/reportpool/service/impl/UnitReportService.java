@@ -41,11 +41,20 @@ public class UnitReportService {
         String[] words = search.split(" ");
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < words.length - 1; i++) {
-            sb.append("+" + words[i] + "* ");
+            if (!words[i].equals(""))
+                sb.append("+" + words[i] + "* ");
         }
         if (words.length > 0) {
-            sb.append("+" + words[words.length - 1] + "*");
+            if (!words[words.length - 1].equals(""))
+                sb.append("+" + words[words.length - 1] + "*");
             search = sb.toString();
+        }
+
+
+        // very cheap way but works great for now
+        System.out.println("Search: " + search);
+        if (search.equals("")) {
+            search = "konu";
         }
 
 
@@ -67,8 +76,8 @@ public class UnitReportService {
 
         Query q=entityManager
                 .createNativeQuery(
-                        "SELECT us.Name  AS ?0," +
-                                " us.Surname AS ?1," +
+                        "SELECT " +
+                                "CONCAT(us.Name, ' ', us.Surname) AS ?1," +
                                 "r.DateCompleted AS ?2, " +
                                 "r.Text AS ?3" +
                                 " FROM department d,departmentunit du,unit u,user us,report r,userdepartmentunit udu" +
@@ -83,8 +92,8 @@ public class UnitReportService {
                                 " AND d.DepartmentID="+dept+
                                 "  AND u.UnitID= "+unit+
                                 "  ORDER BY "+sortColumnIndex+" "+sortDir.toUpperCase())
-                .setParameter(0,"userName")
-                .setParameter(1,"surName")
+                //.setParameter(0,"username")
+                .setParameter(1,"fullName")
                 .setParameter(2,"dateCompleted")
                 .setParameter(3,"text")
                 .setParameter(4,"'"+search+"'")
