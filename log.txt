@@ -6,3 +6,18 @@
 05-05-2019 15:48:09 Huseyin isimli kullaniciya 2 idli rol eklendi.
 05-05-2019 15:48:15 Eray adli kisi asdasd departmaninda sda birimine atandi.
 05-05-2019 15:48:16 Eray isimli kullanicidan sda isimli birim silindi
+06-05-2019 20:07:22 Manager rolune sahip kullanici girisi yapildi
+06-05-2019 20:08:10 User rolune sahip kullanici girisi yapildi
+06-05-2019 20:08:17 Mert isimli kullanicinin 1 idli rolu silindi.
+06-05-2019 20:08:31 Mert isimli kullaniciya 2 idli rol eklendi.
+06-05-2019 20:08:39 User rolune sahip kullanici girisi yapildi
+06-05-2019 20:08:52 mertbicak isimli kullanicinin 2 idli rolu silindi.
+06-05-2019 20:09:01 mertbicak isimli kullaniciya 3 idli rol eklendi.
+06-05-2019 20:09:06 mertbicak isimli kullanicinin 3 idli rolu silindi.
+06-05-2019 20:09:11 mertbicak isimli kullaniciya 2 idli rol eklendi.
+06-05-2019 20:09:27 Manager rolune sahip kullanici girisi yapildi
+06-05-2019 20:10:36 Manager rolune sahip kullanici girisi yapildi
+06-05-2019 20:24:51 Manager rolune sahip kullanici girisi yapildi
+06-05-2019 20:35:49 mertbbicak isimli kullanici yeni rapor ekledi.
+06-05-2019 20:40:04 mertbbicak isimli kullanici yeni rapor ekledi.
+06-05-2019 20:45:35 mertbbicak isimli kullanici yeni rapor ekledi.
