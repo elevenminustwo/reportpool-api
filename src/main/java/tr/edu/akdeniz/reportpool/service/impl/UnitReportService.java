@@ -23,21 +23,21 @@ public class UnitReportService {
     public PaginationDto getUnitsReports(int dept,int unit, String fromDate, String toDate, String draw,String length,String skip,String sortDir,String sortColumnIndex,String search){
         switch (Integer.parseInt(sortColumnIndex)){
             case 0:
-                sortColumnIndex="userName";
+                sortColumnIndex="us.Name";
                 break;
             case 1:
-                sortColumnIndex="Surname";
+                sortColumnIndex="r.DateCompleted";
                 break;
             case 2:
-                sortColumnIndex="DateCompleted";
+                sortColumnIndex="r.Text";
                 break;
             case 3:
-                sortColumnIndex="Text";
+                sortColumnIndex="r.ReportID";
                 break;
 
         }
 
-
+        search = search.replace("+", "");
         String[] words = search.split(" ");
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < words.length - 1; i++) {
