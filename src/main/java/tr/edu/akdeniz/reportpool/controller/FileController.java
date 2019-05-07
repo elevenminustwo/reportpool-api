@@ -3,6 +3,7 @@ package tr.edu.akdeniz.reportpool.controller;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -76,6 +77,19 @@ public class FileController {
                 .contentType(MediaType.parseMediaType(contentType))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
                 .body(resource);
+    }
+
+    @GetMapping("/downloadImagesOfReport/{reportId}")
+    @CrossOrigin
+    public ResponseEntity<List<byte[]>> downloadVoiceRecording(@PathVariable int reportId) {
+
+        List<byte[]> resources = fileStorageService.loadImagesFromDb(reportId);
+
+        return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "")
+                    .body(resources);
+
+
     }
 
 

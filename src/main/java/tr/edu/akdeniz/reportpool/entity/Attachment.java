@@ -11,12 +11,17 @@ public class Attachment {
     private int attachmenttypeId;
     private int reportId;
 
+    public Attachment() {
+
+    }
+
     public Attachment(String fileName, byte[] file, int attachmenttypeId, int reportId) {
         this.fileName = fileName;
         this.file = file;
         this.attachmenttypeId = attachmenttypeId;
         this.reportId = reportId;
     }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

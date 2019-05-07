@@ -19,9 +19,9 @@ public class UnitReportController {
     UnitReportService unitReportService;
 
 
-    @RequestMapping(value = "/unitreports/{dept}/{unit}/")
+    @RequestMapping(value = "/unitreports/{dept}/{unit}/{fromDate}/{toDate}/")
     @CrossOrigin
-    public String getUnitReports(@PathVariable int dept, @PathVariable int unit,HttpServletRequest request) throws JsonProcessingException
+    public String getUnitReports(@PathVariable int dept, @PathVariable int unit, @PathVariable String fromDate, @PathVariable String toDate, HttpServletRequest request) throws JsonProcessingException
     {
 
         Enumeration<String> parameterNames = request.getParameterNames();
@@ -33,7 +33,16 @@ public class UnitReportController {
         String length = request.getParameter("length");
         String draw = request.getParameter("draw");
 
-        PaginationDto paginationDto = unitReportService.getUnitsReports(dept,unit,draw,length,skip,sortDir,sortColumnIndex,search);
+        if (fromDate.equals("undefined")) {
+            fromDate = "1970-01-01";
+        }
+        if (toDate.equals("undefined")) {
+            toDate = "2200-01-01";
+        }
+        System.out.println("from date: " + fromDate);
+        System.out.println("to date: " + toDate);
+
+        PaginationDto paginationDto = unitReportService.getUnitsReports(dept,unit,fromDate,toDate,draw,length,skip,sortDir,sortColumnIndex,search);
 
         String jsonString = gson.toJson(paginationDto);
         return jsonString;
