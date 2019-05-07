@@ -1,6 +1,7 @@
 package tr.edu.akdeniz.reportpool.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class FileStorageService {
@@ -61,6 +64,25 @@ public class FileStorageService {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
         }
     }
+
+    @Transactional(readOnly = true)
+    public List<byte[]> loadImagesFromDb(int reportId) {
+
+        List<Attachment> attachments = attachmentRepository.findAllByReportId(reportId);
+
+        if (attachments != null && !attachments.isEmpty()) {
+            List<byte[]> resources = new ArrayList<>();
+            for (int i = 0; i < attachments.size(); i++) {
+                resources.add(attachments.get(i).getFile());
+            }
+            return resources;
+
+        } else {
+            throw new MyFileNotFoundException("File not found ");
+        }
+
+    }
+
 
     public Resource loadFileAsResource(String fileName) {
         try {
