@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.entity.Token;
@@ -18,11 +19,13 @@ import java.util.Date;
 public class ChangeRequestService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
     @Autowired
-    TokenRepository tokenRepository;
+    private TokenRepository tokenRepository;
     @Autowired
-    EmailSenderService emailSenderService;
+    private EmailSenderService emailSenderService;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private static final long TOKEN_EXPIRE_TIME_MILLIS = 7200000; // 2 hours
 
@@ -95,6 +98,8 @@ public class ChangeRequestService {
         }
 
         if (user != null) {
+
+            newPassword = passwordEncoder.encode(newPassword);
 
             user.setPassword(newPassword);
             userRepository.save(user);

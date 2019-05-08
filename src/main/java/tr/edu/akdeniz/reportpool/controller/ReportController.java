@@ -2,10 +2,13 @@ package tr.edu.akdeniz.reportpool.controller;
 
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import tr.edu.akdeniz.reportpool.entity.Report;
 import tr.edu.akdeniz.reportpool.service.ReportService;
+import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import java.util.List;
 
@@ -18,6 +21,8 @@ public class ReportController {
 
     @Autowired
     ReportService reportService;
+    @Autowired
+    UserService userService;
 
     @RequestMapping("/allreports")
     @CrossOrigin
@@ -36,15 +41,26 @@ public class ReportController {
 
     @PostMapping(value = "/savereport")
     @CrossOrigin
-    public Report saveReport(@RequestParam("report") String reportJson, @RequestParam("files") MultipartFile[] files) {
+    public Report saveReport(Authentication authentication, @RequestParam("report") String reportJson, @RequestParam("files") MultipartFile[] files) {
         Gson gson = new Gson();
         Report report = gson.fromJson(reportJson, Report.class);
+
+        // abort if user of the report trying to be saved is not the same user as the token
+        if(!userService.getUsernameOfUserId(report.getUserId()).equals(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
         return reportService.save(report, files);
     }
 
     @GetMapping(value = "/api/getIncompleteReportOf/{userId}")
     @CrossOrigin
-    public Report getInCompleteReportOf(@PathVariable int userId) {
+    public Report getInCompleteReportOf(Authentication authentication, @PathVariable int userId) {
+
+        if(!userService.getUsernameOfUserId(userId).equals(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
         return reportService.getIncompleteReportOf(userId);
     }
 

@@ -81,7 +81,7 @@ public class FileController {
 
     @GetMapping("/downloadImagesOfReport/{reportId}")
     @CrossOrigin
-    public ResponseEntity<List<byte[]>> downloadVoiceRecording(@PathVariable int reportId) {
+    public ResponseEntity<List<byte[]>> downloadImagesOfReport(@PathVariable int reportId) {
 
         List<byte[]> resources = fileStorageService.loadImagesFromDb(reportId);
 

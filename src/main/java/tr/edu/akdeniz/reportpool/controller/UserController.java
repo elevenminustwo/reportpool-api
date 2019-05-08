@@ -2,6 +2,8 @@ package tr.edu.akdeniz.reportpool.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.UserDto;
 import tr.edu.akdeniz.reportpool.model.UserUnitEditDto;
@@ -19,7 +21,14 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/")
-    public List<UserDto> getUser() {
+    public List<UserDto> getUser(Authentication authentication) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
+
         return userService.getUser();
     }
 
@@ -30,20 +39,36 @@ public class UserController {
 
     @RequestMapping("/api/addDunit")
     @CrossOrigin
-    public ResponseEntity addDunit(@RequestBody UserUnitEditDto userUnitEditDto) {
+    public ResponseEntity addDunit(Authentication authentication, @RequestBody UserUnitEditDto userUnitEditDto) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
 
         return userService.addDunit(userUnitEditDto);
     }
     @RequestMapping("/api/delDunit")
     @CrossOrigin
-    public ResponseEntity delDunit(@RequestBody UserUnitEditDto userUnitEditDto) {
+    public ResponseEntity delDunit(Authentication authentication, @RequestBody UserUnitEditDto userUnitEditDto) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
 
         return userService.delDunit(userUnitEditDto);
     }
 
     @RequestMapping("/api/getUserIdOf/{username}")
     @CrossOrigin
-    public ResponseEntity<Integer> getUserIdOf(@PathVariable String username) {
+    public ResponseEntity<Integer> getUserIdOf(Authentication authentication, @PathVariable String username) {
+
+        // only user himself can access his user id
+        if (!authentication.getName().equals(username)) {
+            throw new BadCredentialsException("");
+        }
+
         return ok(userService.getUserIdOfUser(username));
     }
 

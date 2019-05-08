@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.entity.Unit;
 import tr.edu.akdeniz.reportpool.model.UnitDto;
 import tr.edu.akdeniz.reportpool.repository.DepartmentUnitRepository;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UnitService {
+
     @Autowired
     EntityManager entityManager;
 
@@ -23,6 +25,7 @@ public class UnitService {
     @Autowired
     DepartmentUnitRepository departmentUnitRepository;
 
+    @Transactional(readOnly = true)
     public List<UnitDto> getAllUnitsByDepartmentId(int id){
           List<UnitDto> unit =
                   entityManager

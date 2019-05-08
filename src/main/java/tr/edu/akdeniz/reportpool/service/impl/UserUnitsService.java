@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.model.UserUnitDto;
 
 import javax.persistence.EntityManager;
@@ -14,7 +15,7 @@ public class UserUnitsService {
     @Autowired
     EntityManager entityManager;
 
-
+    @Transactional(readOnly = true)
     public List<UserUnitDto> getUserUnits(int i) {
         Query userunit = entityManager.createNativeQuery(
                 "SELECT du.DepartmentUnitID AS departmentUnitId, d.Name AS departmentName, u.Name AS unitName, d.DepartmentID AS departmentId, u.UnitID AS unitId FROM Unit u, Department d, Departmentunit du, Userdepartmentunit udu" +

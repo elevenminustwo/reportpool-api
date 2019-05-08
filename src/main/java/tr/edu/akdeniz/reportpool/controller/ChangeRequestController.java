@@ -4,6 +4,8 @@ import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.service.impl.ChangeRequestService;
 import tr.edu.akdeniz.reportpool.service.impl.EmailSenderService;
@@ -26,7 +28,12 @@ public class ChangeRequestController {
 
     @PostMapping("/sendPasswordChangeRequest")
     @CrossOrigin
-    public ResponseEntity<String> passwordChangeRequest(@RequestParam(value = "username", required = true) String username) {
+    public ResponseEntity<String> passwordChangeRequest(Authentication authentication, @RequestParam(value = "username", required = true) String username) {
+
+        // if username got from token is not the same user that we're trying to change the password, abort
+        if(!authentication.getName().equals(username)) {
+            throw new BadCredentialsException("");
+        }
 
         String[] emailAndToken;
 
