@@ -3,6 +3,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 import javafx.scene.control.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UnitReportDto;
 import tr.edu.akdeniz.reportpool.repository.*;
@@ -19,7 +20,7 @@ public class UnitReportService {
     EntityManager entityManager;
 
 
-
+    @Transactional(readOnly = true)
     public PaginationDto getUnitsReports(int dept,int unit, String fromDate, String toDate, String draw,String length,String skip,String sortDir,String sortColumnIndex,String search){
         switch (Integer.parseInt(sortColumnIndex)){
             case 0:

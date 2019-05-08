@@ -28,3 +28,95 @@
 07-05-2019 23:11:33 mertbbicak isimli kullanici yeni rapor ekledi.
 07-05-2019 23:13:05 mertbbicak isimli kullanici yeni rapor ekledi.
 07-05-2019 23:16:51 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 20:03:24 mertbbicak isimli kullanici sifre degistirdi.
+08-05-2019 20:08:23 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:10:53 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:13:24 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:14:18 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:21:08 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:29:16 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:31:40 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:33:36 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:34:15 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:35:20 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 20:36:17 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:01:15 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:01:24 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:02:49 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:03:59 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:04:18 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:13:59 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:14:07 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:14:15 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:14:25 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:14:31 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:14:55 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:16:05 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:16:35 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:29:19 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:31:05 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:31:11 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:31:17 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 21:31:24 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 21:34:12 Yeni kullanici kaydi yapildi
+08-05-2019 21:34:20 [HATA] Hatali kullanici giris denemesi
+08-05-2019 21:34:52 [HATA] Hatali kullanici giris denemesi
+08-05-2019 21:35:20 Yeni kullanici kaydi yapildi
+08-05-2019 21:35:33 [HATA] Hatali kullanici giris denemesi
+08-05-2019 21:47:42 Admin rolune sahip kullanici girisi yapildi
+08-05-2019 21:48:06 Admin rolune sahip kullanici girisi yapildi
+08-05-2019 21:54:45 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+08-05-2019 21:54:51 bugrabicak isimli kullanicinin 3 idli rolu silindi.
+08-05-2019 21:54:57 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+08-05-2019 22:14:49 bugrabicak isimli kullanicinin 1 idli rolu silindi.
+08-05-2019 22:14:54 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+08-05-2019 22:15:06 mertbicak1 adli kisi BIDB departmaninda Bilisim birimine atandi.
+08-05-2019 22:15:21 mertbicak1 adli kisi BIDB departmaninda Teknik birimine atandi.
+08-05-2019 22:15:28 mertbicak1 isimli kullanicidan Bilisim isimli birim silindi
+08-05-2019 22:15:29 mertbicak1 isimli kullanicidan Teknik isimli birim silindi
+08-05-2019 22:15:40 bugrabicak adli kisi BIDB departmaninda Teknik birimine atandi.
+08-05-2019 22:15:58 bugrabicak adli kisi BIDB departmaninda Bilisim birimine atandi.
+08-05-2019 22:16:05 bugrabicak adli kisi BIDB departmaninda Tasarım birimine atandi.
+08-05-2019 22:16:13 bugrabicak adli kisi Fen Fakültesi departmaninda Bilisim birimine atandi.
+08-05-2019 22:17:47 bugrabicak adli kisi Fen Fakültesi departmaninda Tasarım birimine atandi.
+08-05-2019 22:19:02 User rolune sahip kullanici girisi yapildi
+08-05-2019 22:19:22 bugrabicak isimli kullanicidan Tasarım isimli birim silindi
+08-05-2019 22:19:56 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:20:03 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:20:18 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:20:20 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:21:05 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 22:25:20 bugrabicak adli kisi Fen Fakültesi departmaninda Tasarım birimine atandi.
+08-05-2019 22:25:44 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:27:53 bugrabicak adli kisi Fen Fakültesi departmaninda Tasarım birimine atandi.
+08-05-2019 22:28:30 mertbbicak adli kisi Fen Fakültesi departmaninda Tasarım birimine atandi.
+08-05-2019 22:32:51 User rolune sahip kullanici girisi yapildi
+08-05-2019 22:36:50 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:37:00 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:37:19 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 22:37:50 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:37:53 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:38:35 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:38:39 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:39:02 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 22:39:09 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 23:00:13 User rolune sahip kullanici girisi yapildi
+08-05-2019 23:00:24 Admin rolune sahip kullanici girisi yapildi
+08-05-2019 23:41:18 bugrabicak isimli kullanicinin 1 idli rolu silindi.
+08-05-2019 23:41:25 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+08-05-2019 23:41:33 bugrabicak adli kisi BIDB departmaninda Teknik birimine atandi.
+08-05-2019 23:41:39 bugrabicak adli kisi BIDB departmaninda Bilisim birimine atandi.
+08-05-2019 23:41:51 bugrabicak isimli kullanicidan Bilisim isimli birim silindi
+08-05-2019 23:42:17 User rolune sahip kullanici girisi yapildi
+08-05-2019 23:43:25 Admin rolune sahip kullanici girisi yapildi
+08-05-2019 23:43:48 bugrabicak isimli kullanicinin 1 idli rolu silindi.
+08-05-2019 23:43:54 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+08-05-2019 23:44:03 bugrabicak isimli kullanicidan Teknik isimli birim silindi
+08-05-2019 23:44:09 bugrabicak adli kisi BIDB departmaninda Teknik birimine atandi.
+08-05-2019 23:44:19 User rolune sahip kullanici girisi yapildi
+08-05-2019 23:44:29 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 23:44:50 bugrabicak isimli kullanici yeni rapor ekledi.
+08-05-2019 23:45:13 Manager rolune sahip kullanici girisi yapildi
+08-05-2019 23:45:25 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 23:45:37 mertbbicak isimli kullanici yeni rapor ekledi.
+08-05-2019 23:46:06 mertbbicak isimli kullanici yeni rapor ekledi.

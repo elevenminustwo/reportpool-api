@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.model.DepartmentDto;
 import tr.edu.akdeniz.reportpool.repository.DepartmentRepository;
 
@@ -18,6 +19,7 @@ public class DepartmentService {
     @Autowired
     DepartmentRepository departmentRepository;
 
+    @Transactional(readOnly = true)
     public List<DepartmentDto> getAllDepartments(){
         return departmentRepository.findAll()
                 .stream()

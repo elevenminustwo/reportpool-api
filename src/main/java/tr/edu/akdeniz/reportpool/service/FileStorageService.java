@@ -83,7 +83,7 @@ public class FileStorageService {
 
     }
 
-
+    @Transactional
     public Resource loadFileAsResource(String fileName) {
         try {
             Path filePath = this.fileStorageLocation.resolve(fileName).normalize();

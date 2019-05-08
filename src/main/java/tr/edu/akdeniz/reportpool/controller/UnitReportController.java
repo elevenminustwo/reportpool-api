@@ -3,10 +3,13 @@ package tr.edu.akdeniz.reportpool.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UnitReportDto;
 import tr.edu.akdeniz.reportpool.service.impl.UnitReportService;
+import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
@@ -17,12 +20,19 @@ public class UnitReportController {
 
     @Autowired
     UnitReportService unitReportService;
+    @Autowired
+    UserService userService;
 
 
     @RequestMapping(value = "/unitreports/{dept}/{unit}/{fromDate}/{toDate}/")
     @CrossOrigin
-    public String getUnitReports(@PathVariable int dept, @PathVariable int unit, @PathVariable String fromDate, @PathVariable String toDate, HttpServletRequest request) throws JsonProcessingException
+    public String getUnitReports(Authentication authentication, @PathVariable int dept, @PathVariable int unit, @PathVariable String fromDate, @PathVariable String toDate, HttpServletRequest request) throws JsonProcessingException
     {
+
+        // abort if token owner is not assigned to dept/unit as authority
+        if(!userService.userIsDepartmentUnitAuthority(authentication.getName(), dept, unit)) {
+            throw new BadCredentialsException("");
+        }
 
         Enumeration<String> parameterNames = request.getParameterNames();
         Gson gson = new Gson();

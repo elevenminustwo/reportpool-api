@@ -9,6 +9,8 @@ import org.apache.http.protocol.HTTP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import tr.edu.akdeniz.reportpool.model.PaginationDto;
 import tr.edu.akdeniz.reportpool.model.UserDto;
@@ -28,7 +30,14 @@ public class AdminController {
 
     @RequestMapping(value = "/api/getPersons")
     @CrossOrigin
-    public String getUser(HttpServletRequest request) throws JsonProcessingException {
+    public String getUser(Authentication authentication, HttpServletRequest request) throws JsonProcessingException {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
+
         Enumeration<String> parameterNames = request.getParameterNames();
         Gson gson = new Gson();
         String search = request.getParameter("search[value]");
@@ -63,12 +72,24 @@ public class AdminController {
 
     @RequestMapping(value = "/api/addRole")
     @CrossOrigin
-    public ResponseEntity addRole(@RequestBody UserrolesDto userrolesDto) {
+    public ResponseEntity addRole(Authentication authentication, @RequestBody UserrolesDto userrolesDto) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
         return userService.addRole(userrolesDto);
     }
     @RequestMapping(value = "/api/delRole")
     @CrossOrigin
-    public ResponseEntity delRole(@RequestBody UserrolesDto userrolesDto) {
+    public ResponseEntity delRole(Authentication authentication, @RequestBody UserrolesDto userrolesDto) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
         return userService.delRole(userrolesDto);
     }
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.akdeniz.reportpool.entity.Departmentunit;
 import tr.edu.akdeniz.reportpool.entity.User;
 import tr.edu.akdeniz.reportpool.entity.Userdepartmentunit;
@@ -44,12 +45,14 @@ public class UserService implements GenericUserService {
     @Autowired
     EntityManager entityManager;
 
-
+    @Transactional(readOnly = true)
     public List<UserDto> getUser(){
         return userRepository.findAll().stream()
                 .map(t -> new UserDto(t.getUserId(),t.getUsername(),t.getEmail(),t.getPassword().toString(),t.getName(),t.getSurname(),t.getIsActive()))
                 .collect(Collectors.toList());
     }
+
+    @Transactional(readOnly = true)
     public PaginationDto getPersons(String draw,String length,String skip,String sortDir,String sortColumnIndex,String search){
 
         switch (Integer.parseInt(sortColumnIndex)){
@@ -136,6 +139,7 @@ public class UserService implements GenericUserService {
         return paginationDto;
     }
 
+    @Transactional
     public ResponseEntity addRole(UserrolesDto userrolesDto){
         Userroles userroles = new Userroles();
         userroles.setRoleId(userrolesDto.getRoleId());
@@ -160,6 +164,8 @@ public class UserService implements GenericUserService {
         }
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    @Transactional
     public ResponseEntity delRole(UserrolesDto userrolesDto){
         Userroles userroles = userroleRepository.findByUserId(userrolesDto.getUserId());
         if(userroles!=null){
@@ -184,6 +190,7 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @Transactional
     public ResponseEntity addDunit(UserUnitEditDto userUnitEditDto){
         Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitEditDto.departmentId,Integer.parseInt(userUnitEditDto.getUnitId()));
         if(departmentu==null){
@@ -213,6 +220,8 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
 
     }
+
+    @Transactional
     public ResponseEntity delDunit(UserUnitEditDto userUnitEditDto){
         Departmentunit departmentu = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(userUnitEditDto.departmentId,Integer.parseInt(userUnitEditDto.getUnitId()));
         if(departmentu!=null){
@@ -233,7 +242,8 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    public ResponseEntity login(String username,String psw){
+    @Transactional
+    public ResponseEntity<String[]> login(String username,String psw, String token){
         /* commented out by mert
         if(userRepository.existsUserByUsernameAndPassword(username,psw)){
             return new ResponseEntity(HttpStatus.OK);
@@ -241,8 +251,8 @@ public class UserService implements GenericUserService {
         */
 
         // Mert was here *******************
-        if(userRepository.existsUserByUsernameAndPasswordAndIsActive(username,psw, (byte)1)){
-            int id = userroleRepository.findByUserId(userRepository.findByUsernameAndPassword(username,psw).getUserId()).getRoleId();
+        if(userRepository.existsUserByUsernameAndIsActive(username, (byte)1)){
+            int id = userroleRepository.findByUserId(userRepository.findByUsername(username).getUserId()).getRoleId();
             String role = "";
             switch (id){
                 case 1:
@@ -264,7 +274,7 @@ public class UserService implements GenericUserService {
             catch (Exception e){
                 System.out.println("not found file");
             }
-            return new ResponseEntity(role,HttpStatus.OK);
+            return new ResponseEntity(new String[]{role, token},HttpStatus.OK);
         }
         // *********************************
         try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
@@ -278,6 +288,8 @@ public class UserService implements GenericUserService {
         }
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
+
+    @Transactional
     public ResponseEntity register(String email,String username,String psw,String name,String surname){
         User user = new User();
             user.setEmail(email);
@@ -301,9 +313,50 @@ public class UserService implements GenericUserService {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @Transactional(readOnly = true)
     public int getUserIdOfUser(String username) {
         User user = userRepository.findByUsername(username);
         return user.getUserId();
+    }
+
+    @Transactional(readOnly = true)
+    public String getUsernameOfUserId(int userId) {
+        User user = userRepository.findByUserId(userId);
+        return user.getUsername();
+    }
+
+    @Transactional(readOnly = true)
+    public boolean isUserAdmin(String username) {
+        int userId = getUserIdOfUser(username);
+        Userroles userRoles = userroleRepository.findUserrolesByUserIdAndRoleId(userId, 1); // only works if admin id is 1
+        if (userRoles != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Transactional(readOnly = true)
+    public boolean isUserManagerByUserId(int userId) {
+        Userroles userRoles = userroleRepository.findUserrolesByUserIdAndRoleId(userId, 2); // only works if manager id is 2
+        if (userRoles != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Transactional(readOnly = true)
+    public boolean userIsDepartmentUnitAuthority(String username, int dept, int unit) {
+        int userId = getUserIdOfUser(username);
+        Departmentunit departmentunit = departmentUnitRepository.findFirstByDepartmentIdAndUnitId(dept, unit);
+        if (departmentunit != null) {
+            Userdepartmentunit userdepartmentunit = userDUnitRepository.findFirstByDepartmentunitIdAndUserId(departmentunit.getDepartmentUnitId(), userId);
+            if (userdepartmentunit != null && isUserManagerByUserId(userId)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

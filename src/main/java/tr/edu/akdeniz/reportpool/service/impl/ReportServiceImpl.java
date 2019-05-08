@@ -28,6 +28,7 @@ public class ReportServiceImpl implements ReportService {
     @Autowired
     private UserRepository userRepository;
 
+    @Transactional(readOnly = true)
     public List<Report> findAll() {
         return reportRepository.findAll();
     }
@@ -51,6 +52,7 @@ public class ReportServiceImpl implements ReportService {
         return r;
     }
 
+    @Transactional(readOnly = true)
     public Report getIncompleteReportOf(int userId) {
         return reportRepository.findTopByUserIdAndIsCompletedOrderByReportIdDesc(userId, (byte) 0);
     }
