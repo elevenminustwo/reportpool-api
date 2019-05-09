@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UnitRepository extends JpaRepository<Unit,Integer> {
     Unit findByUnitId(int id);
+    Unit findFirstByName(String name);
 }

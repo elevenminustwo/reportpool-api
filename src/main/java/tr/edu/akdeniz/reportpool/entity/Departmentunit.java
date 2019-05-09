@@ -13,7 +13,7 @@ public class Departmentunit {
     private int unitId;
 
     @Id
-    @Column(name = "DepartmentUnitID", nullable = false)
+    @Column(name = "DepartmentUnitID")
     public int getDepartmentUnitId() {
         return departmentUnitId;
     }
