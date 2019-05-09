@@ -18,8 +18,11 @@ import tr.edu.akdeniz.reportpool.model.UserrolesDto;
 import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Scanner;
 
 @RestController
 public class AdminController {
@@ -91,6 +94,40 @@ public class AdminController {
         }
 
         return userService.delRole(userrolesDto);
+    }
+
+    @GetMapping(value = "/api/getLogs/{surfaceOrTechnical}")
+    @CrossOrigin
+    public ResponseEntity<String> getLogs(Authentication authentication, @PathVariable boolean surfaceOrTechnical) {
+
+        // checks if user is admin from token
+        if (!userService.isUserAdmin(authentication.getName())) {
+            throw new BadCredentialsException("");
+        }
+
+        StringBuilder sb = new StringBuilder();
+        // read logs from file
+        File file;
+        if (surfaceOrTechnical) {
+            file = new File("log.txt");
+        } else {
+            file = new File("logfile.log");
+        }
+        Scanner sc = null;
+        try {
+            sc = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        while (sc.hasNextLine()) {
+            sb.append(sc.nextLine());
+            sb.append("<br>");
+        }
+
+        sc.close();
+
+        return ResponseEntity.ok(sb.toString());
     }
 
 

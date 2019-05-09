@@ -2,6 +2,7 @@ package tr.edu.akdeniz.reportpool.controller;
 
 import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -15,6 +16,9 @@ import java.io.FileNotFoundException;
 @RestController
 @RequestMapping("/api/change")
 public class ChangeRequestController {
+
+    @Value("${reportpool.uilocation}")
+    private String uiLocation;
 
     @Autowired
     ChangeRequestService changeRequestService;
@@ -47,21 +51,12 @@ public class ChangeRequestController {
         mailMessage.setTo(emailAndToken[0]);
         mailMessage.setSubject("Şifre Yenileme");
         mailMessage.setFrom("reportpooladmin@gmail.com");
-        // during development
         mailMessage.setText("Şifrenizi yenilemek için buraya tıklayınız : "
-                + UI_LOCATION_TEST + "/passwordReset.html?token="+ emailAndToken[1]);
-            /* after deployment
-            mailMessage.setText("To reset your password, please click here : "
-                    +"http://" + UI_LOCATION + ":8080/api/change/changePassword?token="+token.getToken());
-                    */
+                + uiLocation + "/passwordReset.html?token="+ emailAndToken[1]);
 
 
-        try {
-            emailSenderService.sendEmail(mailMessage);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+        emailSenderService.sendEmail(mailMessage);
+
 
         return ResponseEntity.ok("Request sent.");
 
@@ -84,13 +79,9 @@ public class ChangeRequestController {
             mailMessage.setTo(email);
             mailMessage.setSubject("Şifre Yenileme");
             mailMessage.setFrom("reportpooladmin@gmail.com");
-            // during development
             mailMessage.setText("Şifrenizi yenilemek için buraya tıklayınız : "
-                    + UI_LOCATION_TEST + "/passwordReset.html?token="+tokenToSend);
-            /* after deployment
-            mailMessage.setText("To reset your password, please click here : "
-                    +"http://" + UI_LOCATION + ":8080/api/change/changePassword?token="+token.getToken());
-                    */
+                    + uiLocation + "/passwordReset.html?token="+tokenToSend);
+
 
 
             try {
