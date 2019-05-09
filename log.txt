@@ -120,3 +120,73 @@
 08-05-2019 23:45:25 mertbbicak isimli kullanici yeni rapor ekledi.
 08-05-2019 23:45:37 mertbbicak isimli kullanici yeni rapor ekledi.
 08-05-2019 23:46:06 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 18:10:00 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:10:43 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:13:35 User rolune sahip kullanici girisi yapildi
+09-05-2019 18:13:47 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 18:15:40 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 18:16:04 bugrabicak isimli kullanicinin 1 idli rolu silindi.
+09-05-2019 18:16:12 bugrabicak isimli kullaniciya 3 idli rol eklendi.
+09-05-2019 18:17:17 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:25:33 User rolune sahip kullanici girisi yapildi
+09-05-2019 18:26:28 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 18:31:00 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:40:52 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:42:02 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:46:10 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:46:44 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:49:05 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:49:55 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 18:50:18 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:01:34 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:01:54 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:02:01 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:09:40 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:10:17 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:10:42 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:10:46 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:10:48 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:18:13 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:23:52 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:24:13 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:32:29 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:33:07 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:35:22 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:36:27 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:37:56 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:41:35 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:42:06 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 19:42:20 User rolune sahip kullanici girisi yapildi
+09-05-2019 19:42:29 bugrabicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:43:14 User rolune sahip kullanici girisi yapildi
+09-05-2019 19:43:29 User rolune sahip kullanici girisi yapildi
+09-05-2019 19:45:03 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:45:33 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:49:37 User rolune sahip kullanici girisi yapildi
+09-05-2019 19:50:26 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 19:50:38 mertbbicak isimli kullanici yeni rapor ekledi.
+09-05-2019 19:58:32 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 20:25:27 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 20:33:05 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 20:34:17 mertbbicak isimli kullanici sifre degistirdi.
+09-05-2019 20:34:24 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 20:35:32 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 20:36:07 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:36:37 bugrabicak isimli kullanici sifre degistirdi.
+09-05-2019 20:36:43 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:40:34 mertbicak isimli kullanici sifre degistirdi.
+09-05-2019 20:40:45 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:41:12 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 20:42:02 mertbicak isimli kullanicinin 1 idli rolu silindi.
+09-05-2019 20:42:10 mertbicak isimli kullaniciya 3 idli rol eklendi.
+09-05-2019 20:44:24 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:50:29 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:52:21 mertbicak isimli kullanici sifre degistirdi.
+09-05-2019 20:52:29 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:57:00 User rolune sahip kullanici girisi yapildi
+09-05-2019 20:59:03 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 21:05:57 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 21:15:24 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 21:31:54 Admin rolune sahip kullanici girisi yapildi
+09-05-2019 22:01:05 Manager rolune sahip kullanici girisi yapildi
+09-05-2019 22:12:19 Admin rolune sahip kullanici girisi yapildi

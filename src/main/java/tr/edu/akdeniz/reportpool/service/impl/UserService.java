@@ -326,6 +326,12 @@ public class UserService implements GenericUserService {
     }
 
     @Transactional(readOnly = true)
+    public String getEmailOfUserId(int userId) {
+        User user = userRepository.findByUserId(userId);
+        return user.getEmail();
+    }
+
+    @Transactional(readOnly = true)
     public boolean isUserAdmin(String username) {
         int userId = getUserIdOfUser(username);
         Userroles userRoles = userroleRepository.findUserrolesByUserIdAndRoleId(userId, 1); // only works if admin id is 1

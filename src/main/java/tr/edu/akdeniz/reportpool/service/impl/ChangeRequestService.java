@@ -1,6 +1,7 @@
 package tr.edu.akdeniz.reportpool.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import java.util.Date;
 
 @Service
 public class ChangeRequestService {
+
 
     @Autowired
     private UserRepository userRepository;
@@ -59,7 +61,7 @@ public class ChangeRequestService {
     @Transactional
     public String sendPasswordChangeRequestByEmail(String email) {
 
-        User user = userRepository.findByEmail(email);
+        User user = userRepository.findFirstByEmail(email);
 
 
         if (user != null) {

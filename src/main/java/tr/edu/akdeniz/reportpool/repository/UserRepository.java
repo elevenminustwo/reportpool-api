@@ -10,6 +10,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     User findByUsernameAndPassword(String name,String psw);
     User findByUsername(String username);
     User findByEmail(String email);
+    User findFirstByEmail(String email);
 
     // after security
     Boolean existsUserByUsernameAndIsActive(String name, byte isActive);
