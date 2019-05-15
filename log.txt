@@ -21,3 +21,9 @@
 06-05-2019 20:35:49 mertbbicak isimli kullanici yeni rapor ekledi.
 06-05-2019 20:40:04 mertbbicak isimli kullanici yeni rapor ekledi.
 06-05-2019 20:45:35 mertbbicak isimli kullanici yeni rapor ekledi.
+07-05-2019 16:51:21 [HATA] Hatali kullanici giris denemesi
+07-05-2019 16:51:51 Yeni kullanici kaydi yapildi
+07-05-2019 16:51:58 [HATA] Hatali kullanici giris denemesi
+07-05-2019 16:52:06 [HATA] Hatali kullanici giris denemesi
+07-05-2019 16:52:52 [HATA] Hatali kullanici giris denemesi
+07-05-2019 16:53:04 Admin rolune sahip kullanici girisi yapildi

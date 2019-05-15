@@ -100,6 +100,19 @@ public class Report {
     }
 
     @Override
+    public String toString() {
+        return "Report{" +
+                "reportId=" + reportId +
+                ", title='" + title + '\'' +
+                ", text='" + text + '\'' +
+                ", isCompleted=" + isCompleted +
+                ", dateCompleted='" + dateCompleted + '\'' +
+                ", userId=" + userId +
+                ", departmentunitId=" + departmentunitId +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
 
         return Objects.hash(reportId, title, text, isCompleted, dateCompleted, userId, departmentunitId);

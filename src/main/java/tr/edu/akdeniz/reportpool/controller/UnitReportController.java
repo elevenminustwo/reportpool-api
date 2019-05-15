@@ -40,6 +40,26 @@ public class UnitReportController {
 
     }
 
+    @RequestMapping(value = "/downloadreports/{dept}/{unit}/")
+    @CrossOrigin
+    public String downloadReports(@PathVariable int dept, @PathVariable int unit,HttpServletRequest request) throws JsonProcessingException
+    {
+
+        Enumeration<String> parameterNames = request.getParameterNames();
+        Gson gson = new Gson();
+        String search = request.getParameter("search[value]");
+        String sortColumnIndex = request.getParameter("order[0][column]");
+        String sortDir = request.getParameter("order[0][dir]");
+        String skip = request.getParameter("start");
+        String length = request.getParameter("length");
+        String draw = request.getParameter("draw");
+
+        unitReportService.downloadReports(dept,unit,draw,length,skip,sortDir,sortColumnIndex,search);
+
+        //String jsonString = gson.toJson(paginationDto);
+        return "";
+
+    }
 
 
     @CrossOrigin

@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="reportpool@localhost" uuid="5d9a9eb9-6cbc-491e-b28e-d328cecfe9e2">
-      <driver-ref>mysql</driver-ref>
+    <data-source source="LOCAL" name="reportpool@localhost" uuid="2c902cb5-0701-46c6-83f3-0270cf0a1941">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3308/reportpool</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="NewPersistenceUnit/Hibernate" uuid="324510a4-f12b-4d75-a4ce-f67053400a5a">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-C:/Users/Rabia/Documents/GitHub/reportpool-api/src/main/java/META-INF/persistence.xml</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/reportpool</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
-        <property name="yearIsDateType" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="characterSetResults" value="utf8" />
+        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
         <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
   </component>
