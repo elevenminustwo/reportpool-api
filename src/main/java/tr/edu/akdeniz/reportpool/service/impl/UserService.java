@@ -291,7 +291,10 @@ public class UserService implements GenericUserService {
 
     @Transactional
     public ResponseEntity register(String email,String username,String psw,String name,String surname){
-        User user = new User();
+
+        if(userRepository.findFirstByEmail(email)==null){
+
+            User user = new User();
             user.setEmail(email);
             user.setUsername(username);
             user.setPassword(psw);
@@ -300,17 +303,21 @@ public class UserService implements GenericUserService {
             //user.setIsActive((byte)1); commented out by Mert
             user.setIsActive((byte)0); // Mert added this (artik register oldugunda inaktif)
             userRepository.save(user);
+            try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
+                Date date = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                PrintWriter out = new PrintWriter(fileWriter);
+                out.println(formatter.format(date) +" Yeni kullanici kaydi yapildi");
+            }
+            catch (Exception e){
+                System.out.println("not found file");
+            }
 
-        try (FileWriter fileWriter = new FileWriter("log.txt", true)) {
-            Date date = new Date();
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-            PrintWriter out = new PrintWriter(fileWriter);
-            out.println(formatter.format(date) +" Yeni kullanici kaydi yapildi");
+            return new ResponseEntity(HttpStatus.OK);
         }
-        catch (Exception e){
-            System.out.println("not found file");
-        }
-        return new ResponseEntity(HttpStatus.OK);
+
+        return new ResponseEntity(HttpStatus.CONFLICT);
+
     }
 
     @Transactional(readOnly = true)
