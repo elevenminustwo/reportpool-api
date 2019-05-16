@@ -83,6 +83,24 @@ public class FileStorageService {
 
     }
 
+    @Transactional(readOnly = true)
+    public List<byte[]> loadImagesFromDbForPdf(int reportId) {
+
+        List<Attachment> attachments = attachmentRepository.findAllByReportId(reportId);
+
+        if (attachments != null && !attachments.isEmpty()) {
+            List<byte[]> resources = new ArrayList<>();
+            for (int i = 0; i < attachments.size(); i++) {
+                resources.add(attachments.get(i).getFile());
+            }
+            return resources;
+
+        } else {
+            return null;
+        }
+
+    }
+
     @Transactional
     public Resource loadFileAsResource(String fileName) {
         try {

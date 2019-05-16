@@ -12,6 +12,8 @@ import tr.edu.akdeniz.reportpool.service.impl.UnitReportService;
 import tr.edu.akdeniz.reportpool.service.impl.UserService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.Enumeration;
 import java.util.List;
 
@@ -58,6 +60,45 @@ public class UnitReportController {
         return jsonString;
 
     }
+
+
+    @RequestMapping(value = "/downloadunitreports/{dept}/{unit}/{fromDate}/{toDate}/{search}/")
+    @CrossOrigin
+    public byte[] downloadUnitReports(Authentication authentication, @PathVariable int dept, @PathVariable int unit, @PathVariable String fromDate, @PathVariable String toDate,@PathVariable String search, HttpServletRequest request) throws JsonProcessingException
+    {
+
+        // abort if token owner is not assigned to dept/unit as authority
+        if(!userService.userIsDepartmentUnitAuthority(authentication.getName(), dept, unit)) {
+            throw new BadCredentialsException("");
+        }
+
+        if (fromDate.equals("undefined")) {
+            fromDate = "1970-01-01";
+        }
+        if (toDate.equals("undefined")) {
+            toDate = "2200-01-01";
+        }
+        System.out.println("from date: " + fromDate);
+        System.out.println("to date: " + toDate);
+
+        ByteArrayInputStream pdfByteArrayInput = unitReportService.compileReportsIntoPdf(dept,unit,fromDate,toDate,search);
+
+        return read(pdfByteArrayInput);
+
+    }
+
+
+    private byte[] read(ByteArrayInputStream bais) {
+        byte[] array = new byte[bais.available()];
+        try {
+            bais.read(array);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return array;
+    }
+
 
 
 
